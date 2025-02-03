@@ -1,25 +1,25 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Packages/manifest.json
+    m_FilePath: C:/Users/salda/Documents/GitHub/Team-Arcane/Team Arcane/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638736947200000000
-    m_Hash: 2971002788
+      ticks: 638741945172801395
+    m_Hash: 2388587463
   m_LockFileStatus:
-    m_FilePath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Packages/packages-lock.json
+    m_FilePath: C:/Users/salda/Documents/GitHub/Team-Arcane/Team Arcane/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638736947270000000
-    m_Hash: 4057650916
+      ticks: 638741945172801395
+    m_Hash: 1282636429
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Packages
+m_ProjectPath: C:/Users/salda/Documents/GitHub/Team-Arcane/Team Arcane/Packages
 m_EditorVersion: 6000.0.34f1 (5ab2d9ed9190)
 m_ResolvedPackages:
 - packageId: com.unity.ai.navigation@2.0.5
@@ -27,7 +27,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.5
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.ai.navigation
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.ai.navigation
   assetPath: Packages/com.unity.ai.navigation
   name: com.unity.ai.navigation
   displayName: AI Navigation
@@ -135,7 +135,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.6.0
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.collab-proxy
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.collab-proxy
   assetPath: Packages/com.unity.collab-proxy
   name: com.unity.collab-proxy
   displayName: Version Control
@@ -323,7 +323,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 3.0.31
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.ide.rider
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.ide.rider
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -442,7 +442,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.22
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.ide.visualstudio
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.ide.visualstudio
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -548,7 +548,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.11.2
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.inputsystem
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.inputsystem
   assetPath: Packages/com.unity.inputsystem
   name: com.unity.inputsystem
   displayName: Input System
@@ -614,8 +614,10 @@ m_ResolvedPackages:
     - 1.11.0
     - 1.11.1
     - 1.11.2
+    - 1.12.0
     compatible:
     - 1.11.2
+    - 1.12.0
     recommended: 1.11.2
     deprecated: []
   dependencies:
@@ -699,7 +701,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.multiplayer.center
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.multiplayer.center
   assetPath: Packages/com.unity.multiplayer.center
   name: com.unity.multiplayer.center
   displayName: Multiplayer Center
@@ -789,7 +791,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 17.0.3
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.render-pipelines.universal
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.render-pipelines.universal
   assetPath: Packages/com.unity.render-pipelines.universal
   name: com.unity.render-pipelines.universal
   displayName: Universal RP
@@ -951,7 +953,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.4.5
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.test-framework
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.test-framework
   assetPath: Packages/com.unity.test-framework
   name: com.unity.test-framework
   displayName: Test Framework
@@ -1114,7 +1116,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.8.7
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.timeline
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.timeline
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -1297,7 +1299,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 2.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.ugui
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.ugui
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
   displayName: Unity UI
@@ -1389,7 +1391,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.9.5
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.visualscripting
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.visualscripting
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -1504,7 +1506,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.accessibility
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.accessibility
   assetPath: Packages/com.unity.modules.accessibility
   name: com.unity.modules.accessibility
   displayName: Accessibility
@@ -1571,7 +1573,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.ai
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.ai
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
   displayName: AI
@@ -1638,7 +1640,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.androidjni
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.androidjni
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
   displayName: Android JNI
@@ -1704,7 +1706,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.animation
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.animation
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
   displayName: Animation
@@ -1771,7 +1773,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.assetbundle
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.assetbundle
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
   displayName: Asset Bundle
@@ -1838,7 +1840,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.audio
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.audio
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
   displayName: Audio
@@ -1905,7 +1907,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.cloth
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.cloth
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
   displayName: Cloth
@@ -1976,7 +1978,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.director
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.director
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
   displayName: Director
@@ -2051,7 +2053,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.imageconversion
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.imageconversion
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
   displayName: Image Conversion
@@ -2118,7 +2120,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.imgui
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.imgui
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
   displayName: IMGUI
@@ -2185,7 +2187,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.jsonserialize
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.jsonserialize
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
   displayName: JSONSerialize
@@ -2252,7 +2254,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.particlesystem
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.particlesystem
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
   displayName: Particle System
@@ -2319,7 +2321,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.physics
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.physics
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
   displayName: Physics
@@ -2386,7 +2388,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.physics2d
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.physics2d
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
   displayName: Physics 2D
@@ -2453,7 +2455,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.screencapture
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.screencapture
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
   displayName: Screen Capture
@@ -2524,7 +2526,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.terrain
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.terrain
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
   displayName: Terrain
@@ -2591,7 +2593,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.terrainphysics
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.terrainphysics
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
   displayName: Terrain Physics
@@ -2666,7 +2668,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.tilemap
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.tilemap
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
   displayName: Tilemap
@@ -2736,7 +2738,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.ui
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.ui
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
   displayName: UI
@@ -2803,7 +2805,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.uielements
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.uielements
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
   displayName: UIElements
@@ -2886,7 +2888,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.umbra
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.umbra
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
   displayName: Umbra
@@ -2953,7 +2955,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.unityanalytics
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.unityanalytics
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
   displayName: Unity Analytics
@@ -3027,7 +3029,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.unitywebrequest
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.unitywebrequest
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
   displayName: Unity Web Request
@@ -3094,7 +3096,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.unitywebrequestassetbundle
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
   displayName: Unity Web Request Asset Bundle
@@ -3169,7 +3171,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.unitywebrequestaudio
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.unitywebrequestaudio
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
   displayName: Unity Web Request Audio
@@ -3244,7 +3246,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.unitywebrequesttexture
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.unitywebrequesttexture
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
   displayName: Unity Web Request Texture
@@ -3319,7 +3321,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.unitywebrequestwww
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.unitywebrequestwww
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
   displayName: Unity Web Request WWW
@@ -3410,7 +3412,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.vehicles
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.vehicles
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
   displayName: Vehicles
@@ -3481,7 +3483,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.video
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.video
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
   displayName: Video
@@ -3560,7 +3562,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.vr
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.vr
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
   displayName: VR
@@ -3641,7 +3643,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.wind
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.wind
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
   displayName: Wind
@@ -3708,7 +3710,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.xr
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.xr
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
   displayName: XR
@@ -3787,7 +3789,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.subsystems
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.subsystems
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
   displayName: Subsystems
@@ -3858,7 +3860,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.modules.hierarchycore
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.modules.hierarchycore
   assetPath: Packages/com.unity.modules.hierarchycore
   name: com.unity.modules.hierarchycore
   displayName: Hierarchy Core
@@ -3925,7 +3927,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.0.5
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.ext.nunit
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.ext.nunit
   assetPath: Packages/com.unity.ext.nunit
   name: com.unity.ext.nunit
   displayName: Custom NUnit
@@ -4004,7 +4006,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.3
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.render-pipelines.core
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.render-pipelines.core
   assetPath: Packages/com.unity.render-pipelines.core
   name: com.unity.render-pipelines.core
   displayName: Core RP Library
@@ -4218,7 +4220,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.3
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.shadergraph
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.shadergraph
   assetPath: Packages/com.unity.shadergraph
   name: com.unity.shadergraph
   displayName: Shader Graph
@@ -4421,7 +4423,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 17.0.3
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.render-pipelines.universal-config
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.render-pipelines.universal-config
   assetPath: Packages/com.unity.render-pipelines.universal-config
   name: com.unity.render-pipelines.universal-config
   displayName: Universal RP Config
@@ -4519,7 +4521,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 4.9.2
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.searcher
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.searcher
   assetPath: Packages/com.unity.searcher
   name: com.unity.searcher
   displayName: Searcher
@@ -4550,9 +4552,11 @@ m_ResolvedPackages:
     - 4.7.0-preview
     - 4.9.1
     - 4.9.2
+    - 4.9.3
     compatible:
     - 4.9.2
-    recommended: 4.9.2
+    - 4.9.3
+    recommended: 4.9.3
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -4603,7 +4607,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.8.18
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.burst
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.burst
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -4751,9 +4755,11 @@ m_ResolvedPackages:
     - 1.8.16
     - 1.8.17
     - 1.8.18
+    - 1.8.19
     compatible:
     - 1.8.18
-    recommended: 1.8.18
+    - 1.8.19
+    recommended: 1.8.19
     deprecated: []
   dependencies:
   - name: com.unity.mathematics
@@ -4821,7 +4827,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.3.2
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.mathematics
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.mathematics
   assetPath: Packages/com.unity.mathematics
   name: com.unity.mathematics
   displayName: Mathematics
@@ -4910,7 +4916,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 2.5.1
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.collections
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.collections
   assetPath: Packages/com.unity.collections
   name: com.unity.collections
   displayName: Collections
@@ -4995,9 +5001,11 @@ m_ResolvedPackages:
     - 2.5.0-exp.1
     - 2.5.0-pre.2
     - 2.5.1
+    - 2.5.2
     compatible:
     - 2.5.1
-    recommended: 2.5.1
+    - 2.5.2
+    recommended: 2.5.2
     deprecated: []
   dependencies:
   - name: com.unity.burst
@@ -5076,7 +5084,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.1
   source: 2
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.rendering.light-transport
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.rendering.light-transport
   assetPath: Packages/com.unity.rendering.light-transport
   name: com.unity.rendering.light-transport
   displayName: Unity Light Transport Library
@@ -5172,7 +5180,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.11.4
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.nuget.mono-cecil
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.nuget.mono-cecil
   assetPath: Packages/com.unity.nuget.mono-cecil
   name: com.unity.nuget.mono-cecil
   displayName: Mono Cecil
@@ -5201,9 +5209,11 @@ m_ResolvedPackages:
     - 1.10.1
     - 1.10.2
     - 1.11.4
+    - 1.11.5
     compatible:
     - 1.11.4
-    recommended: 1.11.4
+    - 1.11.5
+    recommended: 1.11.5
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -5252,7 +5262,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 3.0.3
   source: 1
-  resolvedPath: /Users/nickmcclure/Desktop/Team Arcane Project/Team-Arcane/Team Arcane/Library/PackageCache/com.unity.test-framework.performance
+  resolvedPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane\Library\PackageCache\com.unity.test-framework.performance
   assetPath: Packages/com.unity.test-framework.performance
   name: com.unity.test-framework.performance
   displayName: Performance testing API
