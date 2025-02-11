@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1521.6
     height: 854.4
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 332}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 137
+  controlID: 46
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -147,14 +147,14 @@ MonoBehaviour:
     y: 356
     width: 948.8
     height: 442.40002
-  m_MinSize: {x: 231, y: 276}
-  m_MaxSize: {x: 10001, y: 10026}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 101, y: 126}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -352,7 +352,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/ivan's
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -362,15 +362,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/ivan's
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\salda\Documents\GitHub\Team-Arcane\Team Arcane
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 3.5999756}
-    m_SelectedIDs: 78a60000
-    m_LastClickedID: 42616
+    m_SelectedIDs: 70a40000
+    m_LastClickedID: 42096
     m_ExpandedIDs: 0000000070a4000046a6000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1152,9 +1152,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 4.6995053, y: 0.11358553, z: 5.775791}
+    m_Target: {x: 2.3165905, y: 0.50805026, z: 1.8450596}
     speed: 2
-    m_Value: {x: 4.6995053, y: 0.11358553, z: 5.775791}
+    m_Value: {x: 2.3165905, y: 0.50805026, z: 1.8450596}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1200,13 +1200,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: 0.7475733, y: -0.041315436, z: 0.04670923, w: 0.66124594}
     speed: 2
-    m_Value: {x: 0.000001732095, y: 0, z: 0, w: 1}
+    m_Value: {x: 0.7475731, y: -0.04131542, z: 0.046709213, w: 0.6612457}
   m_Size:
-    m_Target: 2.999294
+    m_Target: 3.2383134
     speed: 2
-    m_Value: 2.999294
+    m_Value: 3.2383134
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1361,7 +1361,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 7.2000003
     y: 442.4
-    width: 949.4
+    width: 947.8
     height: 416.40002
   m_SerializedDataModeController:
     m_DataMode: 0
