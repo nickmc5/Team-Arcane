@@ -8,7 +8,7 @@ public class GridBehavior : MonoBehaviour
     public float spacing = 1.1f; // Spacing between tiles
 
     private Tile[,] grid; // Store the grid tiles
-
+    private Tile selectedTile = null;
     void Start()
     {
         grid = new Tile[gridWidth, gridHeight];
