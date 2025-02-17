@@ -423,8 +423,11 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+"Assets/Scenes/Ivan's Game/GridManager.cs"
+"Assets/Scenes/Ivan's Game/PathManager.cs"
 "Assets/Scripts/ivan's/GridBehavior.cs"
 "Assets/Scripts/ivan's/InputHandler.cs"
+"Assets/Scripts/ivan's/PathDrawer.cs"
 "Assets/Scripts/ivan's/Tile.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0

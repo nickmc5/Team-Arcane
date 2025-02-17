@@ -42,10 +42,11 @@ public class GridBehavior : MonoBehaviour
         Tile startTile = grid[0, 0];
         Tile endTile = grid[gridWidth - 1, gridHeight - 1];
 
-        startTile.isStart = true;
-        endTile.isEnd = true;
-
-        startTile.GetComponent<Renderer>().material.color = Color.blue;  // Visual indicator
-        endTile.GetComponent<Renderer>().material.color = Color.red;     // Visual indicator
+        // startTile.isStart = true;
+        startTile.isNode = true;
+        // endTile.isEnd = true;
+        endTile.isNode = true;
+        // startTile.GetComponent<Renderer>().material.color = Color.blue;  // Visual indicator
+        // endTile.GetComponent<Renderer>().material.color = Color.blue;     // Visual indicator
     }
 }

@@ -4,19 +4,24 @@ public class Tile : MonoBehaviour
 {
     public bool isStart = false;
     public bool isEnd = false;
+    public bool isNode = false;
     public bool isConnected = false;
     public Color defaultColor = Color.white;
     public Color connectedColor = Color.green;
     private Renderer rend;
     private LineRenderer lineRenderer;
-
+    public Color currentColor;
     void Start()
     {
         rend = GetComponent<Renderer>();
-        rend.material.color = defaultColor;
+        // rend.material.color = defaultColor;
 
-        if (isStart) rend.material.color = Color.blue;
-        else if (isEnd) rend.material.color = Color.red;
+        // // if (isStart) rend.material.color = Color.cyan;
+        // // else if (isEnd) rend.material.color = Color.cyan;
+        // if(isNode){
+        //     r
+        // }
+        Initialize();
 
         // Set up LineRenderer for wires
         lineRenderer = gameObject.AddComponent<LineRenderer>();
@@ -26,22 +31,34 @@ public class Tile : MonoBehaviour
         lineRenderer.positionCount = 0;
     }
 
-    public void SetConnected(bool connected)
+    public void SetConnected(bool connected, Color selectedColor)
     {
         isConnected = connected;
-        if (!isStart && !isEnd)
-        {
-            rend.material.color = connected ? connectedColor : defaultColor;
-        }
+        // if (!isStart && !isEnd)
+        // {
+            // rend.material.color = connected ? connectedColor : defaultColor;
+            lineRenderer.material.color = selectedColor;
+        // }
     }
     public void Initialize()
     {
-        if (isStart)
-            rend.material.color = Color.red;
-        else if (isEnd)
-            rend.material.color = Color.blue;
-        else
+        Debug.Log("Inititalizeng?");
+        if (isStart){
+            rend.material.color = Color.cyan; 
+            currentColor = Color.cyan;
+        }
+        else if (isEnd){
+            rend.material.color = Color.cyan;
+            currentColor = Color.cyan;
+        }
+        else if(isNode){
+            rend.material.color = Color.cyan;
+            currentColor = Color.cyan;
+        }
+        else {
             rend.material.color = defaultColor;
+            currentColor = defaultColor;
+        }
     }
 
     public void DrawWireTo(Tile otherTile)

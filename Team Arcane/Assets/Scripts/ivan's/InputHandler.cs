@@ -5,18 +5,21 @@ public class InputHandler : MonoBehaviour
 {
     private Tile startTile = null;
     private List<Tile> currentPath = new List<Tile>();
-
+    private Color selecterColor = Color.white;
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) // Start drawing
         {
             Tile clickedTile = GetTileUnderMouse();
-            if (clickedTile != null && clickedTile.isStart)
+            if (clickedTile != null && clickedTile.isNode)
             {
                 startTile = clickedTile;
+                selecterColor = startTile.currentColor;
+                Debug.Log("COLOR IS: " + selecterColor);
                 currentPath.Clear();
                 currentPath.Add(startTile);
-                clickedTile.SetConnected(true);
+                Debug.Log("This is the starting tile copy: " + startTile);
+                clickedTile.SetConnected(true, selecterColor);
             }
         }
 
@@ -31,7 +34,7 @@ public class InputHandler : MonoBehaviour
                 if (AreTilesAdjacent(lastTile, hoveredTile))
                 {
                     currentPath.Add(hoveredTile);
-                    hoveredTile.SetConnected(true);
+                    hoveredTile.SetConnected(true, selecterColor);
                     lastTile.DrawWireTo(hoveredTile);
                 }
             }
@@ -40,7 +43,7 @@ public class InputHandler : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && startTile != null) // Stop drawing
         {
             Tile endTile = currentPath[currentPath.Count - 1];
-            if (endTile.isEnd)
+            if (endTile.isNode)
             {
                 Debug.Log("Valid Connection!");
             }
@@ -49,7 +52,7 @@ public class InputHandler : MonoBehaviour
                 // Clear path if invalid
                 foreach (Tile tile in currentPath)
                 {
-                    tile.SetConnected(false);
+                    tile.SetConnected(false, selecterColor);
                     tile.ClearWire();
                 }
                 Debug.Log("Invalid Connection. Try again.");
