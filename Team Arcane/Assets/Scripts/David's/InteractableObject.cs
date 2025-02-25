@@ -18,7 +18,7 @@ public class InteractableObject : MonoBehaviour
 
     public void PlayerInteract()
     {
-        if (PlayerInventory.playerInv.ContainsKey(requiredItem) || requiredItem == "")
+        if (PlayerInventory.playerInv.Contains(requiredItem) || requiredItem == "")
         {
             onInteract.Invoke();
         }

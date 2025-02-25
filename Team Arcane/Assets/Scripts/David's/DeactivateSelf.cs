@@ -4,7 +4,7 @@ public class DeactivateSelf : MonoBehaviour
 {
     public void Deactivate()
     {
-        PlayerInventory.playerInv.Add("Red Cube", null);
+        PlayerInventory.playerInv.Add("Red Cube");
         gameObject.SetActive(false);
     }
 }

@@ -1,14 +1,13 @@
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public static Dictionary<string,Image> playerInv = new Dictionary<string, Image>();
-    public void AddItem(string n, Image i)
+    public static List<string> playerInv = new List<string>();
+    public void AddItem(string name)
     {
-        playerInv.Add(n, i);
+        playerInv.Add(name);
     }
 
     public void RemoveItem(string name)
