@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System;
+
 
 public class PlayerInteract_LegacyText : MonoBehaviour
 {
     public float range = 3;
-    public Text interactText;
+    public TextMeshProUGUI interactText;
 
     InteractableObject interactObject;
     Ray lookAt;
