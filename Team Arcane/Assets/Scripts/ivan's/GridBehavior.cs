@@ -1,3 +1,4 @@
+// @ -1,51 +1,60 @@
 using UnityEngine;
 
 public class GridBehavior : MonoBehaviour
@@ -41,11 +42,20 @@ public class GridBehavior : MonoBehaviour
         // Example: Set top-left as Start, bottom-right as End
         Tile startTile = grid[0, 0];
         Tile endTile = grid[gridWidth - 1, gridHeight - 1];
+        Tile startTile2 = grid[1,4];
+        Tile endTile2 = grid[1,1];
+
 
         // startTile.isStart = true;
-        startTile.isNode = true;
+        startTile.createNode(true, Color.cyan);
+        endTile.createNode(true, Color.cyan);
+        // startTile.isNode = true;
+
         // endTile.isEnd = true;
-        endTile.isNode = true;
+        // endTile.isNode = true;
+        
+        startTile2.createNode(true, Color.magenta);
+        endTile2.createNode(true, Color.magenta);
         // startTile.GetComponent<Renderer>().material.color = Color.blue;  // Visual indicator
         // endTile.GetComponent<Renderer>().material.color = Color.blue;     // Visual indicator
     }
