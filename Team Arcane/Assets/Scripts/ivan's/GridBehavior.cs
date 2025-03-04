@@ -59,4 +59,6 @@ public class GridBehavior : MonoBehaviour
         // startTile.GetComponent<Renderer>().material.color = Color.blue;  // Visual indicator
         // endTile.GetComponent<Renderer>().material.color = Color.blue;     // Visual indicator
     }
+    
+
 }
