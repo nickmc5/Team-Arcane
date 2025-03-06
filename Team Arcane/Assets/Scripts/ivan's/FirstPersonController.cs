@@ -30,37 +30,47 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
-        // Camera Rotation
-        float rotationY = Input.GetAxis("Mouse X") * lookSpeedX; 
-        rotationX -= Input.GetAxis("Mouse Y") * lookSpeedY;
-        rotationX = Mathf.Clamp(rotationX, -upDownRange, upDownRange);
-
-        // Apply rotation
-        playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-        playerBody.Rotate(Vector3.up * rotationY);
-
-        // Handle Movement
-        float moveDirectionX = Input.GetAxis("Horizontal");
-        float moveDirectionZ = Input.GetAxis("Vertical");
-        
-        Vector3 move = playerBody.right * moveDirectionX + playerBody.forward * moveDirectionZ;
-        move *= speed;
-
-        // Apply gravity
-        if (characterController.isGrounded)
+        if (MenuController.currentMenu == 0)
         {
-            velocity.y = -0.5f; // Small downward force to ensure grounding
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            // Camera Rotation
+            float rotationY = Input.GetAxis("Mouse X") * lookSpeedX;
+            rotationX -= Input.GetAxis("Mouse Y") * lookSpeedY;
+            rotationX = Mathf.Clamp(rotationX, -upDownRange, upDownRange);
+
+            // Apply rotation
+            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+            playerBody.Rotate(Vector3.up * rotationY);
+
+            // Handle Movement
+            float moveDirectionX = Input.GetAxis("Horizontal");
+            float moveDirectionZ = Input.GetAxis("Vertical");
+
+            Vector3 move = playerBody.right * moveDirectionX + playerBody.forward * moveDirectionZ;
+            move *= speed;
+
+            // Apply gravity
+            if (characterController.isGrounded)
+            {
+                velocity.y = -0.5f; // Small downward force to ensure grounding
+            }
+            else
+            {
+                velocity.y -= gravity * Time.deltaTime; // Apply gravity when in the air
+            }
+
+            // Move Character
+            characterController.Move((move + velocity) * Time.deltaTime);
+            
+            // Update Animator
+            bool isWalking = moveDirectionX != 0 || moveDirectionZ != 0;
+            animator.SetBool("isWalking", isWalking);
         }
-        else
+        else if (MenuController.currentMenu == 1)
         {
-            velocity.y -= gravity * Time.deltaTime; // Apply gravity when in the air
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
-
-        // Move Character
-        characterController.Move((move + velocity) * Time.deltaTime);
-
-        // Update Animator
-        bool isWalking = moveDirectionX != 0 || moveDirectionZ != 0;
-        animator.SetBool("isWalking", isWalking);
     }
 }
