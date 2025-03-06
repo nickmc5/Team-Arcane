@@ -10,6 +10,15 @@ public class PlayerInventory : MonoBehaviour
     public static Dictionary<string,Sprite> playerInv = new Dictionary<string, Sprite>();
     public GameObject inventoryUIItems;
 
+    void Start()
+    {
+        if (PersistantGameManager.LevelEntryPoint == -1) return;
+        else
+        {
+            playerInv = PersistantGameManager.masterInventory;
+        }
+    }
+
     public void AddItem(string n, Sprite i)
     {
         playerInv.Add(n, i);
