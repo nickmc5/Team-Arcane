@@ -12,15 +12,13 @@ public class PlayerInventory : MonoBehaviour
 
     void Start()
     {
+        // If not in first scene, load with player with previous inventory
         if (PersistantGameManager.LevelEntryPoint != -1)
         {
-            // playerInv = new Dictionary<string, Sprite>();
             foreach (KeyValuePair<string, Sprite> pair in PersistantGameManager.masterInventory)
             {
                 AddItem(pair.Key, pair.Value);
             }
-            Debug.Log("New Scene, updating user inventory...");
-            Debug.Log(playerInv);
         }
     }
 
