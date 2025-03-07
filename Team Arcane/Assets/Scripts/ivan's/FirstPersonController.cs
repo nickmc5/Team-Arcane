@@ -12,6 +12,7 @@ public class FirstPersonController : MonoBehaviour
     private CharacterController characterController;
     private Animator animator;
     private Transform playerBody;
+    private AudioSource footstep;
 
     private float rotationX = 0;
     private Vector3 velocity; // Stores gravity effects
@@ -22,6 +23,8 @@ public class FirstPersonController : MonoBehaviour
         playerCamera = GetComponentInChildren<Camera>();  
         characterController = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        footstep = GetComponentInChildren<AudioSource>();
+        footstep.gameObject.SetActive(false);
         playerBody = transform; 
 
         Cursor.lockState = CursorLockMode.Locked;
@@ -66,6 +69,11 @@ public class FirstPersonController : MonoBehaviour
             // Update Animator
             bool isWalking = moveDirectionX != 0 || moveDirectionZ != 0;
             animator.SetBool("isWalking", isWalking);
+            if(isWalking){
+                footstep.gameObject.SetActive(true);
+            }else{
+                footstep.gameObject.SetActive(false);
+            }
         }
         else if (MenuController.currentMenu == 1)
         {
