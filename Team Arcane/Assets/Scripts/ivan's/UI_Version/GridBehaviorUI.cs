@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class GridBehaviorUI : MonoBehaviour
 {
@@ -10,7 +11,11 @@ public class GridBehaviorUI : MonoBehaviour
     public GameObject nodePrefab2;
     public GameObject nodePrefab3;
     public GameObject nodePrefab4;
+    public GameObject background1;
+    public static int connectedNodes = 0;
+
     private Dictionary<NodeType, GameObject> nodeVariants;
+
     public int gridWidth = 5;       // Number of tiles horizontally
     public int gridHeight = 5;      // Number of tiles vertically
     public float spacing = 110f;    // Adjust spacing for world scale
@@ -34,6 +39,10 @@ public class GridBehaviorUI : MonoBehaviour
             { NodeType.nodePrefab3, nodePrefab3 },
             { NodeType.nodePrefab4, nodePrefab4 }
         };
+
+        //Background Layer
+       
+        //GRID LAYER
         GameObject gridHolder = new GameObject("GridHolder");
         RectTransform gridHolderTransform = gridHolder.AddComponent<RectTransform>();
         gridHolderTransform.SetParent(worldCanvas.transform, false); // Parent to canvas
@@ -44,6 +53,14 @@ public class GridBehaviorUI : MonoBehaviour
         gridHolderTransform.anchoredPosition = new Vector2(-totalWidth / 2, totalHeight / 2);
         GenerateGrid(gridHolderTransform);
         AssignStartAndEndTiles();
+    }
+    public static void CheckWin(){
+        //if connected nodes reaches max connections!
+        Debug.Log("Current Conenctions: "+ connectedNodes);
+        if (connectedNodes >= 4)
+        {
+            Debug.Log("You Win!");
+        }
     }
 
     void GenerateGrid(Transform parent)
@@ -125,5 +142,6 @@ public class GridBehaviorUI : MonoBehaviour
 
        
     }
+
 
 }

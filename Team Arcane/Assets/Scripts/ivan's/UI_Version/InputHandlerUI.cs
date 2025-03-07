@@ -36,21 +36,21 @@ public class InputHandlerUI : MonoBehaviour
 
         if (Input.GetMouseButton(0) && startTile != null) // Dragging over tiles
         {
-            Debug.Log("Dragging");
+            // Debug.Log("Dragging");
             TileUI hoveredTile = GetTileUnderMouse();
             if (hoveredTile != null && !currentPath.Contains(hoveredTile) && !hoveredTile.activated)
             {
-                Debug.Log("Hovered over a tile");
+                // Debug.Log("Hovered over a tile");
                 if (hoveredTile.isNode && hoveredTile.nodeColor != selecterColor)
                 {
                     return;
                 }
-                Debug.Log("Hovered over a tile2");
+                // Debug.Log("Hovered over a tile2");
                 TileUI lastTile = currentPath[currentPath.Count - 1];
 
                 if (AreTilesAdjacent(lastTile, hoveredTile))
                 {
-                    Debug.Log("Hovered over a tile3");
+                    // Debug.Log("Hovered over a tile3");
                     currentPath.Add(hoveredTile);
                     hoveredTile.SetConnected(true, selecterColor, startTile);
                     lastTile.DrawWireTo(hoveredTile);
@@ -61,6 +61,10 @@ public class InputHandlerUI : MonoBehaviour
                         paths[hoveredTile] = paths[startTile]; // Store under both keys
                         startTile = null;
                         currentPath.Clear();
+                        Debug.Log("Finished 2");
+                        //INCREASE COUNT FOR WIN CONDITION
+                        GridBehaviorUI.connectedNodes++;
+                        GridBehaviorUI.CheckWin();
                     }
                 }
             }
@@ -79,6 +83,7 @@ public class InputHandlerUI : MonoBehaviour
                 else if (endTile.isNode && endTile.nodeColor == selecterColor)
                 {
                     // Store the path using both start and end nodes
+                    Debug.Log("Finished 1");
                     paths[startTile] = new List<TileUI>(currentPath);
                     paths[endTile] = paths[startTile];
                     // gridBehavior.CheckWinCondition();
@@ -106,18 +111,6 @@ public class InputHandlerUI : MonoBehaviour
 
     }
 
-    // TileUI GetTileUnderMouse()
-    // {
-    //     Debug.Log("HIT SOMETHING");
-    //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //     if (Physics.Raycast(ray, out RaycastHit hit))
-    //     {
-    //         Debug.Log("HIT a Tile!");
-    //         return hit.collider.GetComponent<TileUI>();
-    //     }
-    //     return null;
-    // }
-
     TileUI GetTileUnderMouse()
     {
         // Get the event system (needed for UI raycasts)
@@ -131,7 +124,7 @@ public class InputHandlerUI : MonoBehaviour
 
         // Perform UI Raycast
         List<RaycastResult> results = new List<RaycastResult>();
-        GraphicRaycaster raycaster = FindObjectOfType<GraphicRaycaster>(); // Get the Canvas' raycaster
+        GraphicRaycaster raycaster = FindFirstObjectByType<GraphicRaycaster>(); // Get the Canvas' raycaster
         if (raycaster != null)
         {
             raycaster.Raycast(pointerData, results);
@@ -143,7 +136,7 @@ public class InputHandlerUI : MonoBehaviour
             TileUI tile = result.gameObject.GetComponent<TileUI>();
             if (tile != null)
             {
-                Debug.Log("HIT a Tile UI!");
+                // Debug.Log("HIT a Tile UI!");
                 return tile;
             }
         }
@@ -151,12 +144,6 @@ public class InputHandlerUI : MonoBehaviour
         return null;
     }
 
-
-    // bool AreTilesAdjacent(TileUI a, TileUI b)
-    // {
-    //     float distance = Vector3.Distance(a.transform.position, b.transform.position);
-    //     return distance < 1.2f;
-    // }
     bool AreTilesAdjacent(TileUI a, TileUI b)
 {
     // Get the RectTransforms of both tiles
@@ -166,7 +153,7 @@ public class InputHandlerUI : MonoBehaviour
     // Calculate the distance between the two tiles' anchored positions
     float distance = Vector2.Distance(aRect.anchoredPosition, bRect.anchoredPosition);
 
-    // Return whether the distance is less than the threshold (1.2f in this case)
+    // Return whether the distance is less than the threshold (this was calculated by the size of the tiles + spacing lol)
     return distance < 150f;
 }
 
@@ -192,31 +179,46 @@ public class InputHandlerUI : MonoBehaviour
     }
 
     // **Clear the entire path when either start or end node is clicked**
-   void ClearPath(TileUI nodeTile)
-{
-    if (paths.ContainsKey(nodeTile))
-    {
-        List<TileUI> pathTiles = paths[nodeTile];
 
-        // **Check if path is valid before accessing it**
-        if (pathTiles.Count > 0)
+    //Used chat to help me edit this function...turns out I was having an issue bc I was storing both start and end keys as basically different paths, so while I deleted one, it did NOT delete the other. So even though they were not connected together, it still treated each node as connected after they were connected once...so now it deletes both!
+    void ClearPath(TileUI nodeTile)
+    {
+        // Check if the node has an associated path
+        if (paths.ContainsKey(nodeTile))
         {
+            List<TileUI> pathTiles = paths[nodeTile];
+
+            // Clear all tiles in the path
             foreach (TileUI tile in pathTiles)
             {
                 tile.SetConnected(false, selecterColor, null, null);
                 tile.ClearWire();
             }
 
-            // Only remove if there is a valid end node
-            if (pathTiles.Count > 1) 
+            // Remove the path from the dictionary using both the start and end nodes
+            TileUI otherTile = pathTiles[0] == nodeTile ? pathTiles[pathTiles.Count - 1] : pathTiles[0];
+
+            // Remove both start and end node entries from the paths dictionary
+            paths.Remove(nodeTile);  // Remove the path associated with the clicked node
+            paths.Remove(otherTile); // Remove the path associated with the other node in the path
+
+            Debug.Log("Path cleared and removed from paths dictionary.");
+            
+            // If the path contains more than one tile, decrement connectedNodes
+            if (pathTiles.Count > 1)
             {
-                TileUI endNode = pathTiles[pathTiles.Count - 1];
-                paths.Remove(endNode);
+                GridBehaviorUI.connectedNodes--;
+                Debug.Log($"Path had multiple nodes, current connections: {GridBehaviorUI.connectedNodes}");
             }
         }
-
-        paths.Remove(nodeTile);
+        else
+        {
+            // Handle case where no path exists for the node, just clear the node
+            nodeTile.SetConnected(false, selecterColor, null, null);
+            nodeTile.ClearWire();
+            Debug.Log("No path found for the clicked node, just clearing the node.");
+        }
     }
-}
+
 
 }

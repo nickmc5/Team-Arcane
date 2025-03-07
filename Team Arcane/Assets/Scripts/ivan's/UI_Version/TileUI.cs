@@ -89,7 +89,7 @@ public class TileUI : MonoBehaviour
     // Draw a rectangle wire between two tiles
     public void DrawWireTo(TileUI otherTile)
     {
-        Debug.Log("DRAWING THE WIRE/RECT");
+        // Debug.Log("DRAWING THE WIRE/RECT");
         if (wireRectTransform == null)
         {
             // Create the wire image (rectangle) dynamically
