@@ -7,15 +7,20 @@ using TMPro;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public static Dictionary<string,Sprite> playerInv = new Dictionary<string, Sprite>();
+    private Dictionary<string,Sprite> playerInv = new Dictionary<string, Sprite>();
     public GameObject inventoryUIItems;
 
     void Start()
     {
-        if (PersistantGameManager.LevelEntryPoint == -1) return;
-        else
+        if (PersistantGameManager.LevelEntryPoint != -1)
         {
-            playerInv = PersistantGameManager.masterInventory;
+            // playerInv = new Dictionary<string, Sprite>();
+            foreach (KeyValuePair<string, Sprite> pair in PersistantGameManager.masterInventory)
+            {
+                AddItem(pair.Key, pair.Value);
+            }
+            Debug.Log("New Scene, updating user inventory...");
+            Debug.Log(playerInv);
         }
     }
 
@@ -30,6 +35,7 @@ public class PlayerInventory : MonoBehaviour
             inventoryUIItems.transform.GetChild(j).GetComponent<Image>().color = Color.white;
             j++;
         }
+        PersistantGameManager.masterInventory = playerInv;
     }
 
     public void RemoveItem(string name)
@@ -49,5 +55,7 @@ public class PlayerInventory : MonoBehaviour
             inventoryUIItems.transform.GetChild(j).GetComponent<Image>().color = Color.white;
             j++;
         }
+        PersistantGameManager.masterInventory = playerInv;
     }
+    
 }

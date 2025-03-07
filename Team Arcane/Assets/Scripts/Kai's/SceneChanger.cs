@@ -10,23 +10,16 @@ public class SceneChanger : MonoBehaviour
     public int LevelEntryPoint;
     void Start()
     {
-        // Only perform below if new spawning place character in weird place
+        // Uncomment to spawn user in specific place
         // if (PersistantGameManager.LevelEntryPoint != -1) return;
+        // Initial Game Spawn and all new Scene automatically have a -1 entry point
         // SetPlayerPosAndRot();
-        Debug.Log(SceneName + " is here");
     }
 
     // Update is called once per frame
     void Update()
     {
         
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other.gameObject.name + ": entered");
-        PersistantGameManager.SetTargetLevel(this.SceneName, this.LevelEntryPoint);
-        SceneManager.LoadScene(this.SceneName);
     }
 
     private void OnCollisionEnter(Collision other)
@@ -38,9 +31,7 @@ public class SceneChanger : MonoBehaviour
 
     private void SetPlayerPosAndRot()
     {
-        // Transform spawnPosition = EntryPoints[PersistantGameManager.LevelEntryPoint].transform;
-        // Vector3 newPosition = spawnPosition.position + (spawnPosition.forward * distance);
-        // player.transform.position = newPosition;
-        // player.transform.eulerAngles = new Vector3(0, player.transform.eulerAngles.y + 180, 0);
+       // Set player it designated spawn point here
+       // NOTE: You can leverage persistant game manager to get check current loaded in scene
     }
 }
