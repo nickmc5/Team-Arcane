@@ -10,7 +10,8 @@ public class MenuController : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject HUD;
     public GameObject inventory;
-    public static int currentMenu = 0; // 0 = HUD, 1 = Pause, 2 = Inventory
+    public GameObject puzzle;
+    public static int currentMenu = 0; // 0 = HUD, 1 = Pause, 2 = Inventory, 3 = Puzzle
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,16 +24,24 @@ public class MenuController : MonoBehaviour
                 HUD.SetActive(true);
                 pauseMenu.SetActive(false);
                 //inventory.SetActive(false);
+                puzzle.SetActive(false);
                 break;
             case 1:
                 HUD.SetActive(false);
                 pauseMenu.SetActive(true);
                 //inventory.SetActive(false);
+                puzzle.SetActive(false);
                 break;
             case 2:
                 HUD.SetActive(false);
                 pauseMenu.SetActive(false);
                 //inventory.SetActive(true);
+                puzzle.SetActive(false);
+                break;
+            case 3:
+                HUD.SetActive(false);
+                pauseMenu.SetActive(false);
+                puzzle.SetActive(true);
                 break;
         }
     }
@@ -58,6 +67,11 @@ public class MenuController : MonoBehaviour
         {
             StartCoroutine("InventoryToHUD");
         }
+        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)) && currentMenu == 3)
+        {
+            PuzzleToHud();
+        }
+
     }
 
     public void HUDToPause()
@@ -90,5 +104,23 @@ public class MenuController : MonoBehaviour
         inventoryAnimator.SetInteger("currentMenu", MenuController.currentMenu);
         yield return new WaitForSeconds(1/4f); ;
         HUD.SetActive(true);
+    }
+
+    public void HUDToPuzzle()
+    {
+        puzzle.SetActive(true);
+        HUD.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        currentMenu = 3;
+    }
+
+    public void PuzzleToHud()
+    {
+        puzzle.SetActive(false);
+        HUD.SetActive(true);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        currentMenu = 0;
     }
 }

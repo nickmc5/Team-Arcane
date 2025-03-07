@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using System.Collections;
+using TMPro;
 
 public class GridBehaviorUI : MonoBehaviour
 {
@@ -54,12 +56,14 @@ public class GridBehaviorUI : MonoBehaviour
         GenerateGrid(gridHolderTransform);
         AssignStartAndEndTiles();
     }
-    public static void CheckWin(){
+
+    public void CheckWin(){
         //if connected nodes reaches max connections!
         Debug.Log("Current Conenctions: "+ connectedNodes);
         if (connectedNodes >= 4)
         {
             Debug.Log("You Win!");
+            this.transform.GetComponentInChildren<TextMeshProUGUI>().text = "Puzzle Completed Press esc to exit";
         }
     }
 

@@ -9,7 +9,7 @@ public class InputHandlerUI : MonoBehaviour
     private List<TileUI> currentPath = new List<TileUI>();
     private Color selecterColor = Color.white;
     private Dictionary<TileUI, List<TileUI>> paths = new Dictionary<TileUI, List<TileUI>>();
-    
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) // Start drawing or clearing
@@ -64,7 +64,8 @@ public class InputHandlerUI : MonoBehaviour
                         Debug.Log("Finished 2");
                         //INCREASE COUNT FOR WIN CONDITION
                         GridBehaviorUI.connectedNodes++;
-                        GridBehaviorUI.CheckWin();
+                        //GridBehaviorUI.CheckWin();
+                        this.GetComponent<GridBehaviorUI>().CheckWin();
                     }
                 }
             }
