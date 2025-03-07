@@ -34,18 +34,26 @@ public class GridBehaviorUI : MonoBehaviour
             { NodeType.nodePrefab3, nodePrefab3 },
             { NodeType.nodePrefab4, nodePrefab4 }
         };
-        GenerateGrid();
+        GameObject gridHolder = new GameObject("GridHolder");
+        RectTransform gridHolderTransform = gridHolder.AddComponent<RectTransform>();
+        gridHolderTransform.SetParent(worldCanvas.transform, false); // Parent to canvas
+        float totalWidth = (gridWidth - 1) * spacing;
+        float totalHeight = (gridHeight - 1) * spacing;
+
+        // Center the grid holder inside the canvas
+        gridHolderTransform.anchoredPosition = new Vector2(-totalWidth / 2, totalHeight / 2);
+        GenerateGrid(gridHolderTransform);
         AssignStartAndEndTiles();
     }
 
-    void GenerateGrid()
+    void GenerateGrid(Transform parent)
     {
         for (int x = 0; x < gridWidth; x++)
         {
             for (int y = 0; y < gridHeight; y++)
             {
                 // Instantiate the tile inside the worldCanvas
-                GameObject tileObject = Instantiate(tilePrefab, worldCanvas.transform);
+                GameObject tileObject = Instantiate(tilePrefab, parent);
 
                 // Get the RectTransform
                 RectTransform rectTransform = tileObject.GetComponent<RectTransform>();
@@ -83,12 +91,17 @@ public class GridBehaviorUI : MonoBehaviour
         // Tile startTile2 = grid[1, 4];
         // Tile endTile2 = grid[1, 1];
 
-        SetTileAsNode(0, 0, Color.cyan, NodeType.nodePrefab1); // Set as node and start
-        SetTileAsNode(gridWidth - 1, gridHeight - 1, Color.cyan, NodeType.nodePrefab1); // Set as node and end
+        SetTileAsNode(0, 4, Color.cyan, NodeType.nodePrefab1); // Set as node and start
+        SetTileAsNode(3, 3, Color.cyan, NodeType.nodePrefab1); // Set as node and end
 
-        SetTileAsNode(0, 1, Color.green, NodeType.nodePrefab2); // Set as node and start
-        SetTileAsNode(gridWidth - 1, gridHeight - 2, Color.green, NodeType.nodePrefab2); // Set as node and end
+        SetTileAsNode(0, 3, Color.green, NodeType.nodePrefab3); // Set as node and start
+        SetTileAsNode(4, 0, Color.green, NodeType.nodePrefab3); // Set as node and end
 
+        SetTileAsNode(4, 1, Color.red, NodeType.nodePrefab2); // Set as node and start
+        SetTileAsNode(2, 3, Color.red, NodeType.nodePrefab2); // Set as node and end
+
+        SetTileAsNode(2, 2, Color.blue, NodeType.nodePrefab4); // Set as node and start
+        SetTileAsNode(4, 4, Color.blue, NodeType.nodePrefab4); // Set as node and end
 
     }
 
