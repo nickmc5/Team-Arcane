@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using System.Collections;
+using TMPro;
 
 public class GridBehaviorUI : MonoBehaviour
 {
@@ -10,7 +13,11 @@ public class GridBehaviorUI : MonoBehaviour
     public GameObject nodePrefab2;
     public GameObject nodePrefab3;
     public GameObject nodePrefab4;
+    public GameObject background1;
+    public static int connectedNodes = 0;
+
     private Dictionary<NodeType, GameObject> nodeVariants;
+
     public int gridWidth = 5;       // Number of tiles horizontally
     public int gridHeight = 5;      // Number of tiles vertically
     public float spacing = 110f;    // Adjust spacing for world scale
@@ -34,18 +41,40 @@ public class GridBehaviorUI : MonoBehaviour
             { NodeType.nodePrefab3, nodePrefab3 },
             { NodeType.nodePrefab4, nodePrefab4 }
         };
-        GenerateGrid();
+
+        //Background Layer
+       
+        //GRID LAYER
+        GameObject gridHolder = new GameObject("GridHolder");
+        RectTransform gridHolderTransform = gridHolder.AddComponent<RectTransform>();
+        gridHolderTransform.SetParent(worldCanvas.transform, false); // Parent to canvas
+        float totalWidth = (gridWidth - 1) * spacing;
+        float totalHeight = (gridHeight - 1) * spacing;
+
+        // Center the grid holder inside the canvas
+        gridHolderTransform.anchoredPosition = new Vector2(-totalWidth / 2, totalHeight / 2);
+        GenerateGrid(gridHolderTransform);
         AssignStartAndEndTiles();
     }
 
-    void GenerateGrid()
+    public void CheckWin(){
+        //if connected nodes reaches max connections!
+        Debug.Log("Current Conenctions: "+ connectedNodes);
+        if (connectedNodes >= 4)
+        {
+            Debug.Log("You Win!");
+            this.transform.GetComponentInChildren<TextMeshProUGUI>().text = "Puzzle Completed Press esc to exit";
+        }
+    }
+
+    void GenerateGrid(Transform parent)
     {
         for (int x = 0; x < gridWidth; x++)
         {
             for (int y = 0; y < gridHeight; y++)
             {
                 // Instantiate the tile inside the worldCanvas
-                GameObject tileObject = Instantiate(tilePrefab, worldCanvas.transform);
+                GameObject tileObject = Instantiate(tilePrefab, parent);
 
                 // Get the RectTransform
                 RectTransform rectTransform = tileObject.GetComponent<RectTransform>();
@@ -83,12 +112,17 @@ public class GridBehaviorUI : MonoBehaviour
         // Tile startTile2 = grid[1, 4];
         // Tile endTile2 = grid[1, 1];
 
-        SetTileAsNode(0, 0, Color.cyan, NodeType.nodePrefab1); // Set as node and start
-        SetTileAsNode(gridWidth - 1, gridHeight - 1, Color.cyan, NodeType.nodePrefab1); // Set as node and end
+        SetTileAsNode(0, 4, Color.cyan, NodeType.nodePrefab1); // Set as node and start
+        SetTileAsNode(3, 3, Color.cyan, NodeType.nodePrefab1); // Set as node and end
 
-        SetTileAsNode(0, 1, Color.green, NodeType.nodePrefab2); // Set as node and start
-        SetTileAsNode(gridWidth - 1, gridHeight - 2, Color.green, NodeType.nodePrefab2); // Set as node and end
+        SetTileAsNode(0, 3, Color.green, NodeType.nodePrefab3); // Set as node and start
+        SetTileAsNode(4, 0, Color.green, NodeType.nodePrefab3); // Set as node and end
 
+        SetTileAsNode(4, 1, Color.red, NodeType.nodePrefab2); // Set as node and start
+        SetTileAsNode(2, 3, Color.red, NodeType.nodePrefab2); // Set as node and end
+
+        SetTileAsNode(2, 2, Color.blue, NodeType.nodePrefab4); // Set as node and start
+        SetTileAsNode(4, 4, Color.blue, NodeType.nodePrefab4); // Set as node and end
 
     }
 
@@ -112,5 +146,6 @@ public class GridBehaviorUI : MonoBehaviour
 
        
     }
+
 
 }

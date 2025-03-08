@@ -26,6 +26,18 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        // If not in first scene, load with player with previous inventory
+        if (PersistantGameManager.LevelEntryPoint != -1)
+        {
+            foreach (KeyValuePair<string, Sprite> pair in PersistantGameManager.masterInventory)
+            {
+                AddItem(pair.Key, pair.Value);
+            }
+        }
+    }
+
     public void AddItem(string n, Sprite i)
     {
         if (playerInv.Count == 0)
@@ -43,6 +55,7 @@ public class PlayerInventory : MonoBehaviour
             inventoryUIItems.transform.GetChild(j).GetComponent<Image>().color = Color.white;
             j++;
         }
+        PersistantGameManager.masterInventory = playerInv;
     }
 
     public void RemoveItem(string name)
@@ -82,6 +95,7 @@ public class PlayerInventory : MonoBehaviour
             inventoryUIItems.transform.GetChild(j).GetComponent<Image>().color = Color.white;
             j++;
         }
+        PersistantGameManager.masterInventory = playerInv;
     }
 
     private void UpdateHUDIcon(string text, Sprite icon)
