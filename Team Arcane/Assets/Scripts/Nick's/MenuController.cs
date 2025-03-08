@@ -120,6 +120,7 @@ public class MenuController : MonoBehaviour
     public void PuzzleToHud()
     {
         puzzle.SetActive(false);
+        inventory.SetActive(true);
         HUD.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
