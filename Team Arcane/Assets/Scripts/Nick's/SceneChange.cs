@@ -20,5 +20,6 @@ public class SceneChange : MonoBehaviour
     public void LoadScene()
     {
         SceneManager.LoadScene(sceneName: SceneName);
+        PersistantGameManager.SetTargetLevel(this.SceneName, -1);
     }
 }
