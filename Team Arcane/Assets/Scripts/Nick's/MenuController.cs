@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 
 public class MenuController : MonoBehaviour
@@ -99,7 +100,7 @@ public class MenuController : MonoBehaviour
 
     IEnumerator InventoryToHUD()
     {
-        //inventory.SetActive(false);
+        // inventory.SetActive(false);
         currentMenu = 0;
         inventoryAnimator.SetInteger("currentMenu", MenuController.currentMenu);
         yield return new WaitForSeconds(1/4f); ;
@@ -108,8 +109,9 @@ public class MenuController : MonoBehaviour
 
     public void HUDToPuzzle()
     {
-        puzzle.SetActive(true);
+        inventory.SetActive(false);
         HUD.SetActive(false);
+        puzzle.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         currentMenu = 3;
