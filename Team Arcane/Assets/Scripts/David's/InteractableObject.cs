@@ -18,7 +18,7 @@ public class InteractableObject : MonoBehaviour
 
     public void PlayerInteract()
     {
-        if (PersistantGameManager.masterInventory.ContainsKey(requiredItem) || requiredItem == "")
+        if ((PersistantGameManager.masterInventory.ContainsKey(requiredItem) && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().getCurrentItem() == requiredItem) || requiredItem == "")
         {
             onInteract.Invoke();
         }

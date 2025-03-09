@@ -23,6 +23,20 @@ public class PlayerInventory : MonoBehaviour
             currentItem = (currentItem + 1) % playerInv.Count;
             HUDItem.GetComponent<Image>().sprite = playerInv[indexedInv[currentItem]];
             HUDItem.GetComponentInChildren<TextMeshProUGUI>().text = indexedInv[currentItem];
+
+            int j = 0;
+            foreach (var item in playerInv)
+            {
+                if (item.Key == indexedInv[currentItem])
+                {
+                    inventoryUIItems.transform.GetChild(j).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "<u>" + item.Key + "</u>";
+                }
+                else
+                {
+                    inventoryUIItems.transform.GetChild(j).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = item.Key;
+                }
+                j++;
+            }
         }
     }
 
@@ -50,7 +64,14 @@ public class PlayerInventory : MonoBehaviour
         int j = 0;
         foreach (var item in playerInv)
         {
-            inventoryUIItems.transform.GetChild(j).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = item.Key;
+            if (item.Key == indexedInv[currentItem])
+            {
+                inventoryUIItems.transform.GetChild(j).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "<u>" + item.Key + "</u>";
+            }
+            else
+            {
+                inventoryUIItems.transform.GetChild(j).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = item.Key;
+            }
             inventoryUIItems.transform.GetChild(j).GetComponent<Image>().sprite = item.Value;
             inventoryUIItems.transform.GetChild(j).GetComponent<Image>().color = Color.white;
             j++;
@@ -102,5 +123,10 @@ public class PlayerInventory : MonoBehaviour
     {
         HUDItem.GetComponent<Image>().sprite = icon;
         HUDItem.GetComponentInChildren<TextMeshProUGUI>().text = text;
+    }
+
+    public string getCurrentItem()
+    {
+        return indexedInv[currentItem];
     }
 }
