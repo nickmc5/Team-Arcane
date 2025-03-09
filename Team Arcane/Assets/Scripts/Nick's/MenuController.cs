@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour
 {
     private Animator inventoryAnimator;
-    public GameObject player;
 
     public GameObject pauseMenu;
     public GameObject HUD;
