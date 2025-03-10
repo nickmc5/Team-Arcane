@@ -12,6 +12,7 @@ public class MenuController : MonoBehaviour
     public GameObject inventory;
     public GameObject puzzle;
     public static int currentMenu = 0; // 0 = HUD, 1 = Pause, 2 = Inventory, 3 = Puzzle
+    public AudioSource uiSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,23 +53,28 @@ public class MenuController : MonoBehaviour
         // Menu switching system
         if (Input.GetKeyDown(KeyCode.Escape) && currentMenu == 0)
         {
+            uiSound.Play();
             HUDToPause();
         }
         else if((Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Q)) && currentMenu == 1)
         {
+            uiSound.Play();
             PauseToHUD();
         }
         else if (Input.GetKeyDown(KeyCode.Q) && currentMenu == 0)
         {
+            uiSound.Play();
             HUDToInventory();
 
         }
         else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)) && currentMenu == 2)
         {
+            uiSound.Play();
             StartCoroutine("InventoryToHUD");
         }
         else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)) && currentMenu == 3)
         {
+            uiSound.Play();
             PuzzleToHud();
         }
 

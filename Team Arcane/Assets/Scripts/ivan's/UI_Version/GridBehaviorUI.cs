@@ -15,6 +15,7 @@ public class GridBehaviorUI : MonoBehaviour
     public GameObject nodePrefab4;
     public GameObject background1;
     public static int connectedNodes = 0;
+    public AudioSource completeSound;
 
     private Dictionary<NodeType, GameObject> nodeVariants;
 
@@ -63,6 +64,7 @@ public class GridBehaviorUI : MonoBehaviour
         if (connectedNodes >= 4)
         {
             Debug.Log("You Win!");
+            completeSound?.Play();
             this.transform.GetComponentInChildren<TextMeshProUGUI>().text = "Puzzle Completed Press esc to exit";
         }
     }

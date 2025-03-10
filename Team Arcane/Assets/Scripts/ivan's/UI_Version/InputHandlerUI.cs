@@ -9,6 +9,8 @@ public class InputHandlerUI : MonoBehaviour
     private List<TileUI> currentPath = new List<TileUI>();
     private Color selecterColor = Color.white;
     private Dictionary<TileUI, List<TileUI>> paths = new Dictionary<TileUI, List<TileUI>>();
+    public AudioSource incompleteSound;
+    public AudioSource clickSound;
 
     void Update()
     {
@@ -17,6 +19,7 @@ public class InputHandlerUI : MonoBehaviour
             TileUI clickedTile = GetTileUnderMouse();
             if (clickedTile != null && clickedTile.isNode)
             {
+                clickSound?.Play();
                 // **Find and clear the path if the node is either a start or end node**
                 TileUI pathKey = FindPathKey(clickedTile);
                 if (pathKey != null)
@@ -56,6 +59,7 @@ public class InputHandlerUI : MonoBehaviour
                     lastTile.DrawWireTo(hoveredTile);
                     if (hoveredTile.isNode)
                     {
+                        clickSound?.Play();
                         // Store the path using both start and end node
                         paths[startTile] = new List<TileUI>(currentPath);
                         paths[hoveredTile] = paths[startTile]; // Store under both keys
@@ -80,6 +84,7 @@ public class InputHandlerUI : MonoBehaviour
                 if (endTile == startTile) // **Prevent same start and end node**
                 {
                     ClearPath(startTile);
+                    incompleteSound?.Play();
                 }
                 else if (endTile.isNode && endTile.nodeColor == selecterColor)
                 {
@@ -97,12 +102,16 @@ public class InputHandlerUI : MonoBehaviour
                         tile.SetConnected(false, selecterColor, null, null);
                         tile.ClearWire();
                     }
+                    
+                    incompleteSound?.Play();
                 }
             }
             else
             {
                 // If the path is just a single click, clear it
                 ClearPath(startTile);
+                
+                incompleteSound?.Play();
             }
 
             startTile = null;
@@ -219,6 +228,8 @@ public class InputHandlerUI : MonoBehaviour
             nodeTile.ClearWire();
             Debug.Log("No path found for the clicked node, just clearing the node.");
         }
+        
+        // incompleteSound?.Play();
     }
 
 
