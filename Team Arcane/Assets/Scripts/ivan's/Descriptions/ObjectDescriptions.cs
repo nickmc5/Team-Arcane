@@ -15,7 +15,7 @@ public class ObjectDescriptions
         {
             return descriptions[key];
         }
-        return "No description available.";
+        return null;
     }
 
 }

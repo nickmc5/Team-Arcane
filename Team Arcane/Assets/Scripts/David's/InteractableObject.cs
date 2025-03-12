@@ -8,11 +8,16 @@ public class InteractableObject : MonoBehaviour
 {
     public string requiredItem = "";
     public string buttonPrompt = "[E] to interact";
+    // FOR DESCRIPTIONS
     public string objectDescription;
+    private MenuController menuController;
+
     
     private void Start()
     {
+        // FOR DESCRIPTIONS
         objectDescription = ObjectDescriptions.GetDescription(gameObject.name);
+        menuController = FindFirstObjectByType<MenuController>();
     }
 
     [Serializable]
@@ -27,8 +32,11 @@ public class InteractableObject : MonoBehaviour
         if ((PersistantGameManager.masterInventory.ContainsKey(requiredItem) && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().getCurrentItem() == requiredItem) || requiredItem == "")
         {
             onInteract.Invoke();
-            if(objectDescription != null){
+            // FOR DESCRIPTIONS
+            if (!string.IsNullOrEmpty(objectDescription)) // Check if description is not empty or null
+            {
                 Debug.Log(objectDescription);
+                menuController.ShowDescription(objectDescription); // Show description if available
             }
         }
     }
