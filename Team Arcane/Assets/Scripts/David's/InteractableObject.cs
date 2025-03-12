@@ -8,6 +8,12 @@ public class InteractableObject : MonoBehaviour
 {
     public string requiredItem = "";
     public string buttonPrompt = "[E] to interact";
+    public string objectDescription;
+    
+    private void Start()
+    {
+        objectDescription = ObjectDescriptions.GetDescription(gameObject.name);
+    }
 
     [Serializable]
     public class interactEvent : UnityEvent {}
@@ -21,6 +27,9 @@ public class InteractableObject : MonoBehaviour
         if ((PersistantGameManager.masterInventory.ContainsKey(requiredItem) && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().getCurrentItem() == requiredItem) || requiredItem == "")
         {
             onInteract.Invoke();
+            if(objectDescription != null){
+                Debug.Log(objectDescription);
+            }
         }
     }
 }
