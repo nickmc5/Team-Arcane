@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using TMPro;
+using System.Diagnostics.Contracts;
 
 
 public class MenuController : MonoBehaviour
@@ -13,12 +15,17 @@ public class MenuController : MonoBehaviour
     public GameObject puzzle;
     public static int currentMenu = 0; // 0 = HUD, 1 = Pause, 2 = Inventory, 3 = Puzzle
     public AudioSource uiSound;
+    // NEW UI ELEMENTS FOR DESCRIPTIONS
+    public GameObject descriptionPanel;
+    public TextMeshProUGUI descriptionText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         inventoryAnimator = inventory.GetComponent<Animator>();
         inventory.SetActive(true);
+        // DESCRIPTION
+        descriptionPanel.SetActive(false);
         switch (currentMenu)
         {
             case 0:
@@ -77,6 +84,11 @@ public class MenuController : MonoBehaviour
             uiSound.Play();
             PuzzleToHud();
         }
+         // Close description panel when pressing a key (E or Space)
+        else if (currentMenu == 4 && Input.GetMouseButtonDown(0))
+        {
+            HideDescription();
+        }
 
     }
 
@@ -117,6 +129,7 @@ public class MenuController : MonoBehaviour
         inventory.SetActive(false);
         HUD.SetActive(false);
         puzzle.SetActive(true);
+        descriptionPanel.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         currentMenu = 3;
@@ -129,6 +142,26 @@ public class MenuController : MonoBehaviour
         HUD.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        currentMenu = 0;
+    }
+    // NEW DESCRIPTION METHODS
+    public void ShowDescription(string description)
+    {
+        inventory.SetActive(false);
+        // HUD.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        descriptionText.text = description;
+        descriptionPanel.SetActive(true);
+        currentMenu = 4;
+    }
+    public void HideDescription()
+    {
+        inventory.SetActive(true);
+        HUD.SetActive(true);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        descriptionPanel.SetActive(false);
         currentMenu = 0;
     }
 }
