@@ -22,11 +22,22 @@ public class SceneChanger : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision other)
+    // private void OnCollisionEnter(Collision other)
+    // {
+    //     Debug.Log(other.gameObject.name + ": entered");
+    //     PersistantGameManager.SetTargetLevel(this.SceneName, this.LevelEntryPoint);
+    //     SceneManager.LoadScene(this.SceneName);
+    // }
+
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name + ": entered");
-        PersistantGameManager.SetTargetLevel(this.SceneName, this.LevelEntryPoint);
-        SceneManager.LoadScene(this.SceneName);
+        Debug.Log("Triggered");
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log(other.gameObject.name + " : entered");
+            PersistantGameManager.SetTargetLevel(this.SceneName, this.LevelEntryPoint);
+            SceneManager.LoadScene(this.SceneName);
+        }
     }
 
     private void SetPlayerPosAndRot()
