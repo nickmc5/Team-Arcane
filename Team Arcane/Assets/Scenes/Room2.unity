@@ -2257,8 +2257,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1e4cd6cdace5948ace6d61b01f6f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryUIItems: {fileID: 0}
-  HUDItem: {fileID: 0}
+  inventoryUIItems: {fileID: 720370585}
+  HUDItem: {fileID: 1250750845}
 --- !u!143 &549704747
 CharacterController:
   m_ObjectHideFlags: 0

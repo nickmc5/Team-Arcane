@@ -3574,8 +3574,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1e4cd6cdace5948ace6d61b01f6f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryUIItems: {fileID: 0}
-  HUDItem: {fileID: 0}
+  inventoryUIItems: {fileID: 858834731}
+  HUDItem: {fileID: 259398373}
 --- !u!143 &819991964
 CharacterController:
   m_ObjectHideFlags: 0
@@ -8104,20 +8104,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2188294740007412538, guid: 8e22d89a48183ea46a01262e99f7effd, type: 3}
---- !u!114 &2005170607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005170605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33f0206fccd0f4005b87396649e7dcee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: Library
-  LevelEntryPoint: 2
 --- !u!1 &2010911301
 GameObject:
   m_ObjectHideFlags: 0
@@ -8253,9 +8239,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8e22d89a48183ea46a01262e99f7effd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2005170606}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8e22d89a48183ea46a01262e99f7effd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2005170607}
   m_SourcePrefab: {fileID: 100100000, guid: 8e22d89a48183ea46a01262e99f7effd, type: 3}
 --- !u!1 &2065016694
 GameObject:

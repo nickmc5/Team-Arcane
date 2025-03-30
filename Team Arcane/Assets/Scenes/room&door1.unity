@@ -3914,7 +3914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUIItems: {fileID: 1159010855}
-  HUDItem: {fileID: 0}
+  HUDItem: {fileID: 669070690}
 --- !u!143 &927700246
 CharacterController:
   m_ObjectHideFlags: 0
