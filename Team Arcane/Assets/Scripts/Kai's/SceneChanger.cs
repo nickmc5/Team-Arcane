@@ -22,13 +22,6 @@ public class SceneChanger : MonoBehaviour
         
     }
 
-    // private void OnCollisionEnter(Collision other)
-    // {
-    //     Debug.Log(other.gameObject.name + ": entered");
-    //     PersistantGameManager.SetTargetLevel(this.SceneName, this.LevelEntryPoint);
-    //     SceneManager.LoadScene(this.SceneName);
-    // }
-
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Triggered");
