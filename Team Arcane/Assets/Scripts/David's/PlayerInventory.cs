@@ -43,17 +43,35 @@ public class PlayerInventory : MonoBehaviour
     void Start()
     {
         // If not in first scene, load with player with previous inventory
+        Debug.Log("Inventory Loading into new scene");
+        foreach (KeyValuePair<string, Sprite> pair in PersistantGameManager.masterInventory)
+        {
+            Debug.Log(pair.Key);
+            Debug.Log(pair.Value);
+        }
+        playerInv.Clear();
+        foreach (KeyValuePair<string, Sprite> pair in PersistantGameManager.masterInventory)
+        {
+            Debug.Log(pair.Key);
+            Debug.Log(pair.Value);
+        }
+        Debug.Log("Level Entry Point: " + PersistantGameManager.LevelEntryPoint);
         if (PersistantGameManager.LevelEntryPoint != -1)
         {
             foreach (KeyValuePair<string, Sprite> pair in PersistantGameManager.masterInventory)
             {
-                AddItem(pair.Key, pair.Value);
+                // if (!PersistantGameManager.masterInventory.ContainsKey(pair.Key))
+                // {
+                    AddItem(pair.Key, pair.Value);
+                    Debug.Log(pair.Key + ": was added");
+                // }
             }
         }
     }
 
     public void AddItem(string n, Sprite i)
     {
+        Debug.Log("HERE");
         if (playerInv.Count == 0)
         {
             UpdateHUDIcon(n, i);
@@ -76,7 +94,25 @@ public class PlayerInventory : MonoBehaviour
             inventoryUIItems.transform.GetChild(j).GetComponent<Image>().color = Color.white;
             j++;
         }
-        PersistantGameManager.masterInventory = playerInv;
+
+        // foreach (KeyValuePair<string, Sprite> pair in playerInv)
+        // {
+        //     PersistantGameManager.masterInventory[pair.Key] = pair.Value;
+        // }
+        
+        // If persistant game manager already contains key
+        if (!PersistantGameManager.masterInventory.ContainsKey(n))
+        {
+            PersistantGameManager.masterInventory.Add(n, i);
+        }
+        
+        // PersistantGameManager.masterInventory = playerInv;
+        Debug.Log("MASTER Inventory UPDATED");
+        foreach (KeyValuePair<string, Sprite> pair in PersistantGameManager.masterInventory)
+        {
+            Debug.Log(pair.Key);
+            Debug.Log(pair.Value);
+        }
     }
 
     public void RemoveItem(string name)

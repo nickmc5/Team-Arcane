@@ -5,7 +5,7 @@ public class PersistantGameManager : MonoBehaviour
 {
     public static Dictionary<string, Sprite> masterInventory = new Dictionary<string, Sprite>(); // Player Inventory (Persists Between Scenes)
     public static string LevelName = ""; // Name of the Loaded Scene
-    public static int LevelEntryPoint = -1; // Specifc Level Entry Point
+    public static int LevelEntryPoint = 1; // Specifc Level Entry Point
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

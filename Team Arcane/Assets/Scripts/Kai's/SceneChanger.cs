@@ -7,7 +7,7 @@ public class SceneChanger : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public string SceneName;
-    public int LevelEntryPoint;
+    public int LevelEntryPoint = 1;
     void Start()
     {
         // Uncomment to spawn user in specific place
