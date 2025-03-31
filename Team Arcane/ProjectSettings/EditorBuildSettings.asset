@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hallway.unity
     guid: e5eb3d8314ca4cd4b92f8eb28f2dd009
+  - enabled: 1
+    path: Assets/Scenes/MasterBedroom.unity
+    guid: 72296d8187c914ac7b9e5fe343f6d9d5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

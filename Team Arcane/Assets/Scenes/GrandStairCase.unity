@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f0206fccd0f4005b87396649e7dcee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: GrandStaircase
+  SceneName: MasterBedroom
   LevelEntryPoint: 3
 --- !u!23 &53128109
 MeshRenderer:
@@ -3119,7 +3119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f0206fccd0f4005b87396649e7dcee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: GrandStaircase
+  SceneName: MasterBedroom
   LevelEntryPoint: 3
 --- !u!23 &783967010
 MeshRenderer:
