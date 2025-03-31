@@ -1227,7 +1227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 3
-  interactText: {fileID: 509802298}
+  interactText: {fileID: 191698724}
 --- !u!114 &139237439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4608,9 +4608,9 @@ MonoBehaviour:
   HUD: {fileID: 1105345460}
   inventory: {fileID: 1504649231}
   puzzle: {fileID: 2058537422}
-  uiSound: {fileID: 904769569}
   descriptionPanel: {fileID: 730730014}
   descriptionText: {fileID: 2064994079}
+  uiSound: {fileID: 904769569}
 --- !u!4 &904769571
 Transform:
   m_ObjectHideFlags: 0

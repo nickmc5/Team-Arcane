@@ -4,13 +4,111 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd90e8f1-ea04-43f9-8ddc-ed01c0b1ae56" name="Changes" comment="" />
+    <list default="true" id="dd90e8f1-ea04-43f9-8ddc-ed01c0b1ae56" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/chargingRoom.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/chargingRoom.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/grandstaircase.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/grandstaircase.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/library.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/library.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/master.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/master.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/room1 1.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/room1 1.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/room2.fbx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Meshes/room2.fbx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/ChargingRoom.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/ChargingRoom.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/GrandStairCase.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/GrandStairCase.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Hallway.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Hallway.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Library.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Library.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LivingRoom.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LivingRoom.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MasterBedroom.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MasterBedroom.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Room1.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Room1.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Room2.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Room2.unity.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Room4.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scenes/Room4.unity.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Team Arcane/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Team Arcane/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ExitScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ExitScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/room&amp;door1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/room&amp;door1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/David's/PlayerInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/David's/PlayerInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kai's/PersistantGameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kai's/PersistantGameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kai's/SceneChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kai's/SceneChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/Ubuntu-R SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/Ubuntu-R SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/105n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/105n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/168n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/168n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/178n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/178n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/202n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/202n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/203n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/203n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/2n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/2n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/39n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/39n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/42n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/42n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/51n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/51n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/63n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/63n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/66n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/66n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/6n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/6n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/72n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/72n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Textures/86n.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/86n.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2v67WJEydHYDHKtqNlhGlOu4d8P" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging Nick2",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.20224.419" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-IU-242.20224.419" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd90e8f1-ea04-43f9-8ddc-ed01c0b1ae56" name="Changes" comment="" />
+      <created>1743453700806</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743453700806</updated>
+      <workItem from="1743453702077" duration="403000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
