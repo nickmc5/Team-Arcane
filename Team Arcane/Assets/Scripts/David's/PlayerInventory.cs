@@ -40,14 +40,19 @@ public class PlayerInventory : MonoBehaviour
         }
     }
 
+    // If not in first scene, load with player with previous inventory
     void Start()
     {
-        // If not in first scene, load with player with previous inventory
+        
+        playerInv.Clear(); // Clear current local inventory
+        
+        // If Not coming from an initial level or inventory clearing level
         if (PersistantGameManager.LevelEntryPoint != -1)
         {
+            // Loop through current global inventroy and add to local inventory
             foreach (KeyValuePair<string, Sprite> pair in PersistantGameManager.masterInventory)
             {
-                AddItem(pair.Key, pair.Value);
+                    AddItem(pair.Key, pair.Value);
             }
         }
     }
@@ -76,7 +81,12 @@ public class PlayerInventory : MonoBehaviour
             inventoryUIItems.transform.GetChild(j).GetComponent<Image>().color = Color.white;
             j++;
         }
-        PersistantGameManager.masterInventory = playerInv;
+        
+        // If persistant game manager doesn't already contain key, then add it
+        if (!PersistantGameManager.masterInventory.ContainsKey(n))
+        {
+            PersistantGameManager.masterInventory.Add(n, i);
+        }
     }
 
     public void RemoveItem(string name)

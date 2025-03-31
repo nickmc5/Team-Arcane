@@ -7,7 +7,7 @@ public class SceneChanger : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public string SceneName;
-    public int LevelEntryPoint;
+    public int LevelEntryPoint = 1;
     void Start()
     {
         // Uncomment to spawn user in specific place
@@ -22,11 +22,15 @@ public class SceneChanger : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name + ": entered");
-        PersistantGameManager.SetTargetLevel(this.SceneName, this.LevelEntryPoint);
-        SceneManager.LoadScene(this.SceneName);
+        Debug.Log("Triggered");
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log(other.gameObject.name + " : entered");
+            PersistantGameManager.SetTargetLevel(this.SceneName, this.LevelEntryPoint);
+            SceneManager.LoadScene(this.SceneName);
+        }
     }
 
     private void SetPlayerPosAndRot()
