@@ -7,54 +7,33 @@ using System.Diagnostics.Contracts;
 
 public class MenuController : MonoBehaviour
 {
-    private Animator inventoryAnimator;
-
+    // public Gameobjects for the different canvases
     public GameObject pauseMenu;
     public GameObject HUD;
     public GameObject inventory;
     public GameObject puzzle;
-    public static int currentMenu = 0; // 0 = HUD, 1 = Pause, 2 = Inventory, 3 = Puzzle
-    public AudioSource uiSound;
-    // NEW UI ELEMENTS FOR DESCRIPTIONS
     public GameObject descriptionPanel;
-    public TextMeshProUGUI descriptionText;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public TextMeshProUGUI descriptionText;
+    public AudioSource uiSound;
+    private Animator inventoryAnimator;
+
+    // Keeping track of which canvas is currently being displayed
+    public static int currentMenu = 0; // 0 = HUD, 1 = Pause, 2 = Inventory, 3 = Puzzle
+
     void Start()
     {
-        inventoryAnimator = inventory.GetComponent<Animator>();
+        currentMenu = 0;
+
+        // Set everyting inactive except for HUD and inventory (for the animation)
+        HUD.SetActive(true);
         inventory.SetActive(true);
-        // DESCRIPTION
+        inventoryAnimator = inventory.GetComponent<Animator>();
         descriptionPanel.SetActive(false);
-        switch (currentMenu)
-        {
-            case 0:
-                HUD.SetActive(true);
-                pauseMenu.SetActive(false);
-                //inventory.SetActive(false);
-                puzzle.SetActive(false);
-                break;
-            case 1:
-                HUD.SetActive(false);
-                pauseMenu.SetActive(true);
-                //inventory.SetActive(false);
-                puzzle.SetActive(false);
-                break;
-            case 2:
-                HUD.SetActive(false);
-                pauseMenu.SetActive(false);
-                //inventory.SetActive(true);
-                puzzle.SetActive(false);
-                break;
-            case 3:
-                HUD.SetActive(false);
-                pauseMenu.SetActive(false);
-                puzzle.SetActive(true);
-                break;
-        }
+        pauseMenu.SetActive(false);
+        puzzle.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         // Menu switching system
@@ -79,7 +58,7 @@ public class MenuController : MonoBehaviour
             uiSound.Play();
             StartCoroutine("InventoryToHUD");
         }
-        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)) && currentMenu == 3)
+        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)) && currentMenu == 3 && GridBehaviorUI.connectedNodes >= 4)
         {
             uiSound.Play();
             PuzzleToHud();
@@ -97,10 +76,14 @@ public class MenuController : MonoBehaviour
         pauseMenu.SetActive(true);
         HUD.SetActive(false);
         currentMenu = 1;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void PauseToHUD()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         pauseMenu.SetActive(false);
         HUD.SetActive(true);
         currentMenu = 0;
@@ -112,7 +95,6 @@ public class MenuController : MonoBehaviour
         HUD.SetActive(false);
         currentMenu = 2;
         inventoryAnimator.SetInteger("currentMenu", MenuController.currentMenu);
-        
     }
 
     IEnumerator InventoryToHUD()
@@ -144,7 +126,7 @@ public class MenuController : MonoBehaviour
         Cursor.visible = false;
         currentMenu = 0;
     }
-    // NEW DESCRIPTION METHODS
+
     public void ShowDescription(string description)
     {
         inventory.SetActive(false);

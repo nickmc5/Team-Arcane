@@ -8,6 +8,10 @@ public class DeactivateSelf : MonoBehaviour
 
     private void Start()
     {
+        if (PersistantGameManager.masterInventory.ContainsKey(objectName) || PersistantGameManager.placedObjects.Contains(objectName))
+        {
+            gameObject.SetActive(false);
+        }
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
