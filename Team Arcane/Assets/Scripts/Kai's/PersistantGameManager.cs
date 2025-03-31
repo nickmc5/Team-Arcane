@@ -4,6 +4,8 @@ using UnityEngine;
 public class PersistantGameManager : MonoBehaviour
 {
     public static Dictionary<string, Sprite> masterInventory = new Dictionary<string, Sprite>(); // Player Inventory (Persists Between Scenes)
+    public static List<string> placedObjects = new List<string>();
+    public static int masterCurrentItem;
     public static string LevelName = ""; // Name of the Loaded Scene
     public static int LevelEntryPoint = -1; // Specifc Level Entry Point
     
@@ -24,5 +26,10 @@ public class PersistantGameManager : MonoBehaviour
     {
         LevelName = level;
         LevelEntryPoint = entryPoint;
+    }
+
+    public static void addPlacedObject(string obj)
+    {
+        placedObjects.Add(obj);
     }
 }

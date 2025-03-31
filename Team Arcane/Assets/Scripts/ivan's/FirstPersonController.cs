@@ -75,10 +75,10 @@ public class FirstPersonController : MonoBehaviour
                 footstep.gameObject.SetActive(false);
             }
         }
-        else if (MenuController.currentMenu == 1)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
+        //else if (MenuController.currentMenu == 1)
+        //{
+        //    Cursor.lockState = CursorLockMode.None;
+        //    Cursor.visible = true;
+        //}
     }
 }

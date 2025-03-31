@@ -22,7 +22,10 @@ public class PlayerInteract_LegacyText : MonoBehaviour
         {
             if (hit.collider.TryGetComponent<InteractableObject>(out interactObject))
             {
-                interactText.text = interactObject.buttonPrompt;
+                if(interactObject.placeableObject == null || (interactObject.placeableObject != null && interactObject.placeableObject.activeSelf == false))
+                {
+                    interactText.text = interactObject.buttonPrompt;
+                }
             }
             else
             {
