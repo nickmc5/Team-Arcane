@@ -24,7 +24,7 @@ public class PlayerInventory : MonoBehaviour
         {
             // scrolls down and wraps around (scrolling doesn't work well with trackpads)
             float scroll = Input.mouseScrollDelta.y;
-            if (scroll < 0) 
+            if (scroll < 0)
             {
                 if (currentItem == 0)
                 {
@@ -37,13 +37,13 @@ public class PlayerInventory : MonoBehaviour
                 UpdateInventoryMenuSelectedItem();
             }
             // scrolls down and wraps around (tabbing does same as scrolling down)
-            else if (scroll > 0 || Input.GetKeyDown(KeyCode.Tab)) 
+            else if (scroll > 0 || Input.GetKeyDown(KeyCode.Tab))
             {
                 currentItem = (currentItem + 1) % playerInv.Count;
                 UpdateInventoryMenuSelectedItem();
             }
             // else ifs below checks for num keys and set current item to that number (can be expanded later when more items)
-            else if (Input.GetKeyDown(KeyCode.Alpha1)) 
+            else if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 currentItem = 0;
                 UpdateInventoryMenuSelectedItem();
@@ -63,10 +63,7 @@ public class PlayerInventory : MonoBehaviour
                 currentItem = 3;
                 UpdateInventoryMenuSelectedItem();
             }
-
         }
-        
-
     }
 
     // Updates the arrays for the menu with all the items the player has when coming from other scenes
@@ -115,7 +112,7 @@ public class PlayerInventory : MonoBehaviour
         if (indexedInv[currentItem] == name)
         {
             currentItem = (currentItem + 1) % playerInv.Count;
-            
+
         }
 
         // remove the item
@@ -126,7 +123,7 @@ public class PlayerInventory : MonoBehaviour
         if (currentItem > playerInv.Count)
         {
             currentItem = 0;
-            
+
         }
         // if the inventory is now empty, set current item to out of range and set HUD icon to empty
         else if (playerInv.Count == 0)

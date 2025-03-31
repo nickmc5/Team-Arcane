@@ -7,7 +7,7 @@ public class PersistantGameManager : MonoBehaviour
     public static List<string> placedObjects = new List<string>();
     public static int masterCurrentItem;
     public static string LevelName = ""; // Name of the Loaded Scene
-    public static int LevelEntryPoint = -1; // Specifc Level Entry Point
+    public static int LevelEntryPoint = 1; // Specifc Level Entry Point
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
