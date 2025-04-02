@@ -13,14 +13,24 @@ public class InteractableObject : MonoBehaviour
     public GameObject placeableObject;
     private MenuController menuController;
 
-    
+    // below is only needed if the name of the object changes and needs to stay active (for example the bookshelf where a book is placed)
+    public string nameAfterPlacement;
+
+
     private void Start()
     {
         // places object if placed already and switched scenes
         if (PersistantGameManager.placedObjects.Contains(requiredItem) && placeableObject != null)
         {
             placeableObject.SetActive(true);
-            gameObject.SetActive(false);
+            if (nameAfterPlacement != null)
+            {
+                gameObject.name = nameAfterPlacement;
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
         }
 
         // FOR DESCRIPTIONS
