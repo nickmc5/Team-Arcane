@@ -7854,6 +7854,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1061483049}
   - component: {fileID: 1061483054}
+  - component: {fileID: 1061483055}
   - component: {fileID: 1061483053}
   - component: {fileID: 1061483052}
   - component: {fileID: 1061483051}
@@ -8193,7 +8194,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061483048}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c508b8b8875431645a8b1e358a289c54, type: 3}
   m_Name: 
@@ -8206,6 +8207,29 @@ MonoBehaviour:
   nodePrefab4: {fileID: 2130104338357790355, guid: 7c4c202db37d5364bb28d6b2a09eab6e, type: 3}
   background1: {fileID: 111371835130849488, guid: b03ec679c1a2da7429d8e5931c91b1a9, type: 3}
   completeSound: {fileID: 1061483050}
+  gridWidth: 5
+  gridHeight: 5
+  spacing: 110
+--- !u!114 &1061483055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061483048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afe7bc835594c743bfaf091a471a2c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilePrefab: {fileID: 8859762654349088409, guid: ddea2789a1f1d994bbe48c371bee553f, type: 3}
+  worldCanvas: {fileID: 2058537425}
+  nodePrefab1: {fileID: 1750360169357842392, guid: 771cfdd3e55ee644e9cac2dd4a2fa1d4, type: 3}
+  nodePrefab2: {fileID: 8106406615691981958, guid: cea662a5f56a0ad4ea1471b4c1930070, type: 3}
+  nodePrefab3: {fileID: 4011163130470177657, guid: e431e7d852dbd3c41be6b17e5c0ca54a, type: 3}
+  nodePrefab4: {fileID: 2626556842093802420, guid: 0ccc4036c6518d141a092a8444996808, type: 3}
+  background1: {fileID: 111371835130849488, guid: b03ec679c1a2da7429d8e5931c91b1a9, type: 3}
+  completeSound: {fileID: 1061483052}
   gridWidth: 5
   gridHeight: 5
   spacing: 110
