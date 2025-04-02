@@ -1679,6 +1679,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -2456,6 +2457,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -2886,6 +2888,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -4465,6 +4468,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -6960,6 +6964,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -9120,6 +9125,8 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 443509918}
+  placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -10381,6 +10388,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 802947068}
+  nameAfterPlacement: FictionShelfComplete
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -11207,6 +11215,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 139975885}
+  nameAfterPlacement: RomanceComplete
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -11875,6 +11884,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []

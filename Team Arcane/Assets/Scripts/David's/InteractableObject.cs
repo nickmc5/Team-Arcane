@@ -2,7 +2,6 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
-using static UnityEditor.Progress;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -14,13 +13,24 @@ public class InteractableObject : MonoBehaviour
     public GameObject placeableObject;
     private MenuController menuController;
 
-    
+    // below is only needed if the name of the object changes and needs to stay active (for example the bookshelf where a book is placed)
+    public string nameAfterPlacement;
+
+
     private void Start()
     {
         // places object if placed already and switched scenes
         if (PersistantGameManager.placedObjects.Contains(requiredItem) && placeableObject != null)
         {
             placeableObject.SetActive(true);
+            if (nameAfterPlacement != null)
+            {
+                gameObject.name = nameAfterPlacement;
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
         }
 
         // FOR DESCRIPTIONS
@@ -37,7 +47,7 @@ public class InteractableObject : MonoBehaviour
 
     public void PlayerInteract()
     {
-        if ((PersistantGameManager.masterInventory.ContainsKey(requiredItem) && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().getCurrentItem() == requiredItem && placeableObject.activeSelf == false) || requiredItem == "")
+        if ((PersistantGameManager.masterInventory.ContainsKey(requiredItem) && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().getCurrentItem() == requiredItem) || requiredItem == "")
         {
             onInteract.Invoke();
             if (requiredItem != "")
