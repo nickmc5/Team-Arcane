@@ -45,12 +45,16 @@ public class InteractableObject : MonoBehaviour
                 // adds object to placed object list so it wont spawn in incorrectly when going between scenes
                 PersistantGameManager.addPlacedObject(requiredItem);
             }
-            // FOR DESCRIPTIONS
-            if (!string.IsNullOrEmpty(objectDescription)) // Check if description is not empty or null
-            {
-                Debug.Log(objectDescription);
-                menuController.ShowDescription(objectDescription); // Show description if available
-            }
+            objectDescription = ObjectDescriptions.GetDescription(gameObject.name);
+            
+        }
+        // FOR DESCRIPTIONS
+        // IVAN CHANGE: I moved this outside of that if statement so that it will show the description even if the object is not in players inventory
+        // This way, the description will show up even if the object is not interactable... hope that is ok!
+        if (!string.IsNullOrEmpty(objectDescription)) // Check if description is not empty or null
+        {
+            Debug.Log(objectDescription);
+            menuController.ShowDescription(objectDescription); // Show description if available
         }
     }
 }
