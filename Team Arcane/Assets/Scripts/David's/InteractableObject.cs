@@ -2,7 +2,6 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
-using static UnityEditor.Progress;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -21,6 +20,7 @@ public class InteractableObject : MonoBehaviour
         if (PersistantGameManager.placedObjects.Contains(requiredItem) && placeableObject != null)
         {
             placeableObject.SetActive(true);
+            gameObject.SetActive(false);
         }
 
         // FOR DESCRIPTIONS
@@ -37,7 +37,7 @@ public class InteractableObject : MonoBehaviour
 
     public void PlayerInteract()
     {
-        if ((PersistantGameManager.masterInventory.ContainsKey(requiredItem) && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().getCurrentItem() == requiredItem && placeableObject.activeSelf == false) || requiredItem == "")
+        if ((PersistantGameManager.masterInventory.ContainsKey(requiredItem) && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().getCurrentItem() == requiredItem) || requiredItem == "")
         {
             onInteract.Invoke();
             if (requiredItem != "")
