@@ -15,10 +15,12 @@ public class ObjectDescriptions
         {"Romance", "Mrs. Magnate was always reading these romance books... Her favorite is missing, I hope I can find it before she comes in for her afternoon reading session."},
         {"RomanceComplete", "Mrs. Magante should be able to find her favorite book much easier now! My job here is done."},        
         {"Textbooks","Mr. Magnate's textbooks. Stacks of engineering manuials, physics compendium... he always had a mind for machines and innovation."},
+        {"TextbooksComplete", "The collection is now perfectly organized, just the way Mr. Magnate liked it."},
         {"ScienceFiction","A collection of science fiction novels, brimming with tales of advanced technology and distant worlds. Mr. Magnate often mused about how science was catching up to these novels."},
         {"History","Volumes of historical biographies line this shelf. Mr. Magnate admired the great engineers and inventors of the past—Da Vinci, Tesla, Brunel—learning from their successes."},
         {"RomanceNovel","Mrs. Magnates favorite romance novel... Let me put it back so she doesn't notice."},
-        {"StoryBook","The Magnates always read the Odyssey to the kids, they sure loved their mythology."}
+        {"StoryBook","The Magnates always read the Odyssey to the kids, they sure loved their mythology."},
+        {"Textbook","A single worn textbook, filled with notes and annotations. Mr. Magnate must have studied this one extensively."}
         
         // AND SO ON... WHERE THE KEY IS THE NAME OF THE OBJECT AND THE VALUE IS THE DESCRIPTION
     };
