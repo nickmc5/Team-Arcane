@@ -27,12 +27,12 @@ public class LevelDetailsScript : MonoBehaviour
     private bool CheckAllItemsCollected()
     {
         // Show all the items in the placedObjects list
-        Debug.Log("Current Items in placedObjects: " + string.Join(", ", PersistantGameManager.placedObjects));
+        //Debug.Log("Current Items in placedObjects: " + string.Join(", ", PersistantGameManager.placedObjects));
         foreach (string item in requiredItems)
         {
             if (!PersistantGameManager.placedObjects.Contains(item))
             {
-                Debug.Log("Missing item: " + item);
+                //Debug.Log("Missing item: " + item);
                 return false; // If any required item is missing, return false
             }
         }

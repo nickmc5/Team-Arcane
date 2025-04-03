@@ -108,21 +108,14 @@ public class PlayerInventory : MonoBehaviour
             inventoryUIItems.transform.GetChild(i).GetComponent<Image>().color = Color.clear;
         }
 
-        // check if the removed item was the current item (should be always)
-        if (indexedInv[currentItem] == name)
-        {
-            currentItem = (currentItem + 1) % playerInv.Count;
-
-        }
-
         // remove the item
         playerInv.Remove(name);
         indexedInv.Remove(name);
 
         // if the current item is now out of range, set it to 0
-        if (currentItem > playerInv.Count)
+        if (currentItem >= playerInv.Count)
         {
-            currentItem = 0;
+            currentItem = playerInv.Count - 1;
 
         }
         // if the inventory is now empty, set current item to out of range and set HUD icon to empty
@@ -131,7 +124,6 @@ public class PlayerInventory : MonoBehaviour
             currentItem = -1;
             UpdateHUDIcon("No Items", Resources.Load<Sprite>("DiscIcon"));
         }
-
         UpdateInventoryMenuSelectedItem();
         PersistantGameManager.masterInventory = playerInv;
     }
