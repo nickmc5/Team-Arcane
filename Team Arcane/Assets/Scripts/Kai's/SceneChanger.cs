@@ -8,12 +8,13 @@ public class SceneChanger : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public string SceneName;
     public int LevelEntryPoint = 1;
+    public string SpawnPointName;
     void Start()
     {
         // Uncomment to spawn user in specific place
-        // if (PersistantGameManager.LevelEntryPoint != -1) return;
+        if (PersistantGameManager.LevelEntryPoint != -1) return;
         // Initial Game Spawn and all new Scene automatically have a -1 entry point
-        // SetPlayerPosAndRot();
+        SetPlayerPosAndRot();
     }
 
     // Update is called once per frame
@@ -28,7 +29,7 @@ public class SceneChanger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log(other.gameObject.name + " : entered");
-            PersistantGameManager.SetTargetLevel(this.SceneName, this.LevelEntryPoint);
+            PersistantGameManager.SetTargetLevel(this.SceneName, this.LevelEntryPoint, this.SpawnPointName);
             SceneManager.LoadScene(this.SceneName);
         }
     }
@@ -37,5 +38,13 @@ public class SceneChanger : MonoBehaviour
     {
        // Set player it designated spawn point here
        // NOTE: You can leverage persistant game manager to get check current loaded in scene
+       string SpawnName = PersistantGameManager.SpawnPointName;
+       GameObject SpawnPoint = GameObject.Find(SpawnName);
+
+       if (SpawnPoint != null)
+       {
+           GameObject Player = GameObject.Find(SpawnPoint.name);
+           Player.transform.position = SpawnPoint.transform.position;
+       }
     }
 }
