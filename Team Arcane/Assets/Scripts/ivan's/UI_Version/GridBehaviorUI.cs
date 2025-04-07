@@ -34,6 +34,7 @@ public class GridBehaviorUI : MonoBehaviour
 
     void Start()
     {
+        connectedNodes = 0;
         grid = new TileUI[gridWidth, gridHeight];
         nodeVariants = new Dictionary<NodeType, GameObject>
         {
@@ -67,6 +68,9 @@ public class GridBehaviorUI : MonoBehaviour
             completeSound?.Play();
             this.transform.GetComponentInChildren<TextMeshProUGUI>().text = "Puzzle Completed Press esc to exit";
         }
+    }
+    public void changeConenctions(int connections){
+        connectedNodes += connections;
     }
 
     void GenerateGrid(Transform parent)

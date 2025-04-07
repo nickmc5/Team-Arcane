@@ -66,6 +66,7 @@ public class GridBehaviorLibrary : MonoBehaviour
             Debug.Log("You Win!");
             completeSound?.Play();
             this.transform.GetComponentInChildren<TextMeshProUGUI>().text = "Puzzle Completed Press esc to exit";
+            
         }
     }
 
