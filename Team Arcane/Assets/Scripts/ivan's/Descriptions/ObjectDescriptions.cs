@@ -26,7 +26,12 @@ public class ObjectDescriptions
         {"Textbook","A single worn textbook, filled with notes and annotations. Mr. Magnate must have studied this one extensively."},
         {"MysteryNovel","Another tale of crime and intrigue... Something about these books unsettles me. Why did Mr. Magnate enjoy them so much?"},
         {"SciFiBook","A story of distant worlds and impossible machines... Mr. Magnate always said science was catching up, but I wonder—should it?"},
-        {"HistoryBook","A biography of a great mind from the past... Mr. Magnate always said we had much to learn from them."}
+        {"HistoryBook","A biography of a great mind from the past... Mr. Magnate always said we had much to learn from them."},
+        {"tv", "\"—*!#Y—...citizens are advised to remain indoors... all Model-R units are subject to immediate recall—*%#)—malfunctions... please do not engage—*&#!\""},
+        {"tvOff", "That was strange... I couldn't quite make out what was said, but I hope everything's alright. Might explain why the Magnates are gone."},
+        {"MasterKey", "The key to the master bedroom, maybe the Magnates left something important in there."},
+        {"masterLock", "The master bedroom... I don't seem to have the key."},
+        {"masterUnlock", "The master bedroom is now unlocked, maybe I should take a look inside."}
         // AND SO O,N... WHERE THE KEY IS THE NAME OF THE OBJECT AND THE VALUE IS THE DESCRIPTION
     };
     public static string GetDescription(string key)

@@ -9,8 +9,12 @@ public class InputHandlerUI : MonoBehaviour
     private List<TileUI> currentPath = new List<TileUI>();
     private Color selecterColor = Color.white;
     private Dictionary<TileUI, List<TileUI>> paths = new Dictionary<TileUI, List<TileUI>>();
+    public GridBehaviorUI gridBehavior; // Reference to the GridBehaviorUI script
     public AudioSource incompleteSound;
     public AudioSource clickSound;
+    void Start(){
+        gridBehavior = GetComponent<GridBehaviorUI>();
+    }
 
     void Update()
     {
@@ -67,9 +71,9 @@ public class InputHandlerUI : MonoBehaviour
                         currentPath.Clear();
                         Debug.Log("Finished 2");
                         //INCREASE COUNT FOR WIN CONDITION
-                        GridBehaviorUI.connectedNodes++;
+                        gridBehavior.changeConenctions(1);
                         //GridBehaviorUI.CheckWin();
-                        this.GetComponent<GridBehaviorUI>().CheckWin();
+                        gridBehavior.CheckWin();
                     }
                 }
             }
@@ -217,8 +221,9 @@ public class InputHandlerUI : MonoBehaviour
             // If the path contains more than one tile, decrement connectedNodes
             if (pathTiles.Count > 1)
             {
-                GridBehaviorUI.connectedNodes--;
-                Debug.Log($"Path had multiple nodes, current connections: {GridBehaviorUI.connectedNodes}");
+                gridBehavior.changeConenctions(-1); // Decrease connection count
+                // GridBehaviorUI.connectedNodes--;
+                // Debug.Log($"Path had multiple nodes, current connections: {GridBehaviorUI.connectedNodes}");
             }
         }
         else

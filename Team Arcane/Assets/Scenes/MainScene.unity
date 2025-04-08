@@ -168,6 +168,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place key'
   objectDescription: 
   placeableObject: {fileID: 1493439990}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -7528,6 +7529,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -8242,6 +8244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe3bdff8826c9943b7f4102476bfe1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridBehavior: {fileID: 804217498}
   incompleteSound: {fileID: 804217500}
   clickSound: {fileID: 804217501}
 --- !u!114 &804217498
@@ -9744,6 +9747,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -10244,6 +10248,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -12020,6 +12025,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -15039,6 +15045,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls:

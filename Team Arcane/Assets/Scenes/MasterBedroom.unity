@@ -2304,7 +2304,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -2364,8 +2364,8 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 20
+  near clip plane: 0.01
+  far clip plane: 30
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -9030,6 +9030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe3bdff8826c9943b7f4102476bfe1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gridBehavior: {fileID: 0}
   incompleteSound: {fileID: 1761289670}
   clickSound: {fileID: 1761289671}
 --- !u!114 &1761289673
