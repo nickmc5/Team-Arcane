@@ -1533,7 +1533,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 30
   field of view: 60
   orthographic: 0
@@ -8226,17 +8226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4afe7bc835594c743bfaf091a471a2c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 8859762654349088409, guid: ddea2789a1f1d994bbe48c371bee553f, type: 3}
-  worldCanvas: {fileID: 2058537425}
-  nodePrefab1: {fileID: 1750360169357842392, guid: 771cfdd3e55ee644e9cac2dd4a2fa1d4, type: 3}
-  nodePrefab2: {fileID: 8106406615691981958, guid: cea662a5f56a0ad4ea1471b4c1930070, type: 3}
-  nodePrefab3: {fileID: 4011163130470177657, guid: e431e7d852dbd3c41be6b17e5c0ca54a, type: 3}
-  nodePrefab4: {fileID: 2626556842093802420, guid: 0ccc4036c6518d141a092a8444996808, type: 3}
-  background1: {fileID: 111371835130849488, guid: b03ec679c1a2da7429d8e5931c91b1a9, type: 3}
-  completeSound: {fileID: 1061483050}
-  gridWidth: 5
-  gridHeight: 5
-  spacing: 110
 --- !u!114 &1061483056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13135,8 +13124,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1993ca0512abfc04cba80d887e365201, type: 3}
-  m_Resource: {fileID: 8300000, guid: 1993ca0512abfc04cba80d887e365201, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ccf6a2a107b35d342a19e0501c88bb74, type: 3}
+  m_Resource: {fileID: 8300000, guid: ccf6a2a107b35d342a19e0501c88bb74, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.485
   m_Pitch: 1
