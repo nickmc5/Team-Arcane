@@ -88,8 +88,8 @@ public class PlayerInventory : MonoBehaviour
 
     public void AddItem(string n, Sprite i)
     {
-        // check if current item was -1 (if inventory was empty before) and set it to 0 now
-        currentItem = currentItem < 0 ? 0 : currentItem;
+        // check if inventory was empty and set current item to 0 now
+        currentItem = playerInv.Count == 0 ? 0 : currentItem;
         // add items to inventory and update UI
         playerInv.Add(n, i);
         indexedInv.Add(n);
@@ -112,17 +112,11 @@ public class PlayerInventory : MonoBehaviour
         playerInv.Remove(name);
         indexedInv.Remove(name);
 
-        // if the current item is now out of range, set it to 0
+        // if the current item is now out of range, set it to last item
         if (currentItem >= playerInv.Count)
         {
             currentItem = playerInv.Count - 1;
 
-        }
-        // if the inventory is now empty, set current item to out of range and set HUD icon to empty
-        else if (playerInv.Count == 0)
-        {
-            currentItem = -1;
-            UpdateHUDIcon("No Items", Resources.Load<Sprite>("DiscIcon"));
         }
         UpdateInventoryMenuSelectedItem();
         PersistantGameManager.masterInventory = playerInv;
@@ -138,7 +132,7 @@ public class PlayerInventory : MonoBehaviour
     // Updates which item is currently underlined within the inventory menu and the HUD icon
     private void UpdateInventoryMenuSelectedItem()
     {
-        if (currentItem >= 0)
+        if (playerInv.Count != 0)
         {
             int j = 0;
             foreach (var item in playerInv)
@@ -156,6 +150,10 @@ public class PlayerInventory : MonoBehaviour
                 j++;
             }
             UpdateHUDIcon(indexedInv[currentItem], playerInv[indexedInv[currentItem]]);
+        }
+        else
+        {
+            UpdateHUDIcon("No Items", Resources.Load<Sprite>("DiscIcon"));
         }
     }
 
