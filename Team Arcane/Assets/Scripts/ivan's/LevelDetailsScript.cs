@@ -32,7 +32,7 @@ public class LevelDetailsScript : MonoBehaviour
         {
             if (!PersistantGameManager.placedObjects.Contains(item))
             {
-                //Debug.Log("Missing item: " + item);
+                Debug.Log("Missing item: " + item);
                 return false; // If any required item is missing, return false
             }
         }

@@ -13,6 +13,7 @@ public class GridBehaviorUI : MonoBehaviour
     public GameObject nodePrefab2;
     public GameObject nodePrefab3;
     public GameObject nodePrefab4;
+    public GameObject nodePrefab5;
     public GameObject background1;
     public static int connectedNodes = 0;
     public AudioSource completeSound;
@@ -21,7 +22,9 @@ public class GridBehaviorUI : MonoBehaviour
 
     public int gridWidth = 5;       // Number of tiles horizontally
     public int gridHeight = 5;      // Number of tiles vertically
+    public int numPairs = 4;
     public float spacing = 110f;    // Adjust spacing for world scale
+    public int gameVersion = 1;
 
     private TileUI[,] grid;           // Changed to Tile array instead of Image
     public enum NodeType
@@ -29,7 +32,9 @@ public class GridBehaviorUI : MonoBehaviour
         nodePrefab1,
         nodePrefab2,
         nodePrefab3,
-        nodePrefab4
+        nodePrefab4,
+        nodePrefab5
+
     }
 
     void Start()
@@ -41,7 +46,8 @@ public class GridBehaviorUI : MonoBehaviour
             { NodeType.nodePrefab1, nodePrefab1 },
             { NodeType.nodePrefab2, nodePrefab2 },
             { NodeType.nodePrefab3, nodePrefab3 },
-            { NodeType.nodePrefab4, nodePrefab4 }
+            { NodeType.nodePrefab4, nodePrefab4 },
+            { NodeType.nodePrefab5, nodePrefab5 } // Add more node types as needed
         };
 
         //Background Layer
@@ -62,7 +68,7 @@ public class GridBehaviorUI : MonoBehaviour
     public void CheckWin(){
         //if connected nodes reaches max connections!
         Debug.Log("Current Conenctions: "+ connectedNodes);
-        if (connectedNodes >= 4)
+        if (connectedNodes >= numPairs)
         {
             Debug.Log("You Win!");
             completeSound?.Play();
@@ -117,18 +123,49 @@ public class GridBehaviorUI : MonoBehaviour
         // Tile endTile = grid[gridWidth - 1, gridHeight - 1];
         // Tile startTile2 = grid[1, 4];
         // Tile endTile2 = grid[1, 1];
+        if(gameVersion == 1){
+            SetTileAsNode(0, 4, Color.cyan, NodeType.nodePrefab1); // Set as node and start
+            SetTileAsNode(3, 3, Color.cyan, NodeType.nodePrefab1); // Set as node and end
 
-        SetTileAsNode(0, 4, Color.cyan, NodeType.nodePrefab1); // Set as node and start
-        SetTileAsNode(3, 3, Color.cyan, NodeType.nodePrefab1); // Set as node and end
+            SetTileAsNode(0, 3, Color.green, NodeType.nodePrefab3); // Set as node and start
+            SetTileAsNode(4, 0, Color.green, NodeType.nodePrefab3); // Set as node and end
 
-        SetTileAsNode(0, 3, Color.green, NodeType.nodePrefab3); // Set as node and start
-        SetTileAsNode(4, 0, Color.green, NodeType.nodePrefab3); // Set as node and end
+            SetTileAsNode(4, 1, Color.red, NodeType.nodePrefab2); // Set as node and start
+            SetTileAsNode(2, 3, Color.red, NodeType.nodePrefab2); // Set as node and end
 
-        SetTileAsNode(4, 1, Color.red, NodeType.nodePrefab2); // Set as node and start
-        SetTileAsNode(2, 3, Color.red, NodeType.nodePrefab2); // Set as node and end
-
-        SetTileAsNode(2, 2, Color.blue, NodeType.nodePrefab4); // Set as node and start
-        SetTileAsNode(4, 4, Color.blue, NodeType.nodePrefab4); // Set as node and end
+            SetTileAsNode(2, 2, Color.blue, NodeType.nodePrefab4); // Set as node and start
+            SetTileAsNode(4, 4, Color.blue, NodeType.nodePrefab4); // Set as node and end
+        }
+        else if(gameVersion == 2){
+            SetTileAsNode(0, 0, Color.cyan, NodeType.nodePrefab1);
+            SetTileAsNode(2, 3, Color.cyan, NodeType.nodePrefab1);
+            SetTileAsNode(4, 0, Color.green, NodeType.nodePrefab3);
+            SetTileAsNode(2, 4, Color.green, NodeType.nodePrefab3);
+            SetTileAsNode(1, 2, Color.red, NodeType.nodePrefab2);
+            SetTileAsNode(1, 4, Color.red, NodeType.nodePrefab2);
+            SetTileAsNode(0, 4, Color.blue, NodeType.nodePrefab4);
+            SetTileAsNode(2, 2, Color.blue, NodeType.nodePrefab4);
+        }else if(gameVersion == 3){
+            SetTileAsNode(0, 1, Color.cyan, NodeType.nodePrefab1);
+            SetTileAsNode(5, 4, Color.cyan, NodeType.nodePrefab1);
+            SetTileAsNode(1, 1, Color.green, NodeType.nodePrefab3);
+            SetTileAsNode(5, 5, Color.green, NodeType.nodePrefab3);
+            SetTileAsNode(1, 2, Color.red, NodeType.nodePrefab2);
+            SetTileAsNode(1, 4, Color.red, NodeType.nodePrefab2);
+            SetTileAsNode(1, 3, Color.blue, NodeType.nodePrefab4);
+            SetTileAsNode(0, 5, Color.blue, NodeType.nodePrefab4);
+            SetTileAsNode(3, 1, Color.yellow, NodeType.nodePrefab5);
+            SetTileAsNode(4, 4, Color.yellow, NodeType.nodePrefab5);
+        }else if(gameVersion == 4){
+            SetTileAsNode(0, 0, Color.cyan, NodeType.nodePrefab1);
+            SetTileAsNode(3, 2, Color.cyan, NodeType.nodePrefab1);
+            SetTileAsNode(1, 0, Color.green, NodeType.nodePrefab3);
+            SetTileAsNode(1, 5, Color.green, NodeType.nodePrefab3);
+            SetTileAsNode(1, 1, Color.red, NodeType.nodePrefab2);
+            SetTileAsNode(0, 5, Color.red, NodeType.nodePrefab2);
+            SetTileAsNode(1, 4, Color.blue, NodeType.nodePrefab4);
+            SetTileAsNode(4, 4, Color.blue, NodeType.nodePrefab4);
+        }
 
     }
 

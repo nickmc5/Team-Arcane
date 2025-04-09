@@ -3692,11 +3692,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75b3c70b05332bc419dc0b22bcefced5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredItem: Master Bedroom Key
+  requiredItem: Finale Room Key
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
-  nameAfterPlacement: masterUnlock
+  nameAfterPlacement: FinaleUnlock
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -3721,7 +3721,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Master Bedroom Key
+          m_StringArgument: Finale Room Key
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 815058168}
@@ -3733,7 +3733,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: masterUnlock
+          m_StringArgument: finaleUnlock
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &815058170
@@ -3766,7 +3766,7 @@ Transform:
   m_GameObject: {fileID: 815058168}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 2.56, z: 4.99}
+  m_LocalPosition: {x: -0, y: 2.96, z: 4.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8950,11 +8950,14 @@ MonoBehaviour:
   nodePrefab2: {fileID: 2278498635196558125, guid: dba831918473d82418926cdbea0ff5be, type: 3}
   nodePrefab3: {fileID: 6789524171693121177, guid: e68c807761630fd4587215b2575ee164, type: 3}
   nodePrefab4: {fileID: 2130104338357790355, guid: 7c4c202db37d5364bb28d6b2a09eab6e, type: 3}
+  nodePrefab5: {fileID: 0}
   background1: {fileID: 111371835130849488, guid: b03ec679c1a2da7429d8e5931c91b1a9, type: 3}
   completeSound: {fileID: 1710199936}
   gridWidth: 5
   gridHeight: 5
+  numPairs: 4
   spacing: 110
+  gameVersion: 1
 --- !u!1 &1710946061
 GameObject:
   m_ObjectHideFlags: 0

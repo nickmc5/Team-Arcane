@@ -7903,11 +7903,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1061483049}
-  - component: {fileID: 1061483055}
   - component: {fileID: 1061483052}
   - component: {fileID: 1061483051}
   - component: {fileID: 1061483050}
-  - component: {fileID: 1061483056}
   - component: {fileID: 1061483058}
   - component: {fileID: 1061483057}
   m_Layer: 0
@@ -8224,43 +8222,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1061483055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061483048}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4afe7bc835594c743bfaf091a471a2c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 0}
-  worldCanvas: {fileID: 0}
-  nodePrefab1: {fileID: 0}
-  nodePrefab2: {fileID: 0}
-  nodePrefab3: {fileID: 0}
-  nodePrefab4: {fileID: 0}
-  background1: {fileID: 0}
-  completeSound: {fileID: 0}
-  gridWidth: 5
-  gridHeight: 5
-  spacing: 110
---- !u!114 &1061483056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061483048}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfc33971a14458c4987db8866c0425f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  incompleteSound: {fileID: 1061483051}
-  clickSound: {fileID: 1061483052}
 --- !u!114 &1061483057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8294,11 +8255,14 @@ MonoBehaviour:
   nodePrefab2: {fileID: 8106406615691981958, guid: cea662a5f56a0ad4ea1471b4c1930070, type: 3}
   nodePrefab3: {fileID: 4011163130470177657, guid: e431e7d852dbd3c41be6b17e5c0ca54a, type: 3}
   nodePrefab4: {fileID: 2626556842093802420, guid: 0ccc4036c6518d141a092a8444996808, type: 3}
+  nodePrefab5: {fileID: 0}
   background1: {fileID: 111371835130849488, guid: b03ec679c1a2da7429d8e5931c91b1a9, type: 3}
   completeSound: {fileID: 1061483050}
   gridWidth: 5
   gridHeight: 5
+  numPairs: 4
   spacing: 110
+  gameVersion: 2
 --- !u!1 &1083204957
 GameObject:
   m_ObjectHideFlags: 0
