@@ -168,6 +168,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place key'
   objectDescription: 
   placeableObject: {fileID: 1493439990}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -7528,6 +7529,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls: []
@@ -9618,6 +9620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: MainMenu
+  SpawnName: 
 --- !u!95 &928300262
 Animator:
   serializedVersion: 7
@@ -9744,6 +9747,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -10244,6 +10248,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -12020,6 +12025,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -14932,7 +14938,7 @@ GameObject:
   - component: {fileID: 9023286616149079645}
   - component: {fileID: 9023286616149079646}
   m_Layer: 0
-  m_Name: Door014
+  m_Name: StairCase_Room1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15039,6 +15045,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
       m_Calls:
@@ -15211,8 +15218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f0206fccd0f4005b87396649e7dcee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: Library
+  SceneName: GrandStairCase
   LevelEntryPoint: 2
+  SpawnPointName: Room1_StairCase
 --- !u!65 &9023286616149079646
 BoxCollider:
   m_ObjectHideFlags: 0
