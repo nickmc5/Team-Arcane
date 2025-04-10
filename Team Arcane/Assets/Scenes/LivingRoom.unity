@@ -8018,11 +8018,14 @@ MonoBehaviour:
   nodePrefab2: {fileID: 2278498635196558125, guid: dba831918473d82418926cdbea0ff5be, type: 3}
   nodePrefab3: {fileID: 6789524171693121177, guid: e68c807761630fd4587215b2575ee164, type: 3}
   nodePrefab4: {fileID: 2130104338357790355, guid: 7c4c202db37d5364bb28d6b2a09eab6e, type: 3}
+  nodePrefab5: {fileID: 0}
   background1: {fileID: 111371835130849488, guid: b03ec679c1a2da7429d8e5931c91b1a9, type: 3}
   completeSound: {fileID: 1807740871}
   gridWidth: 5
   gridHeight: 5
+  numPairs: 4
   spacing: 110
+  gameVersion: 1
 --- !u!1 &1814953995
 GameObject:
   m_ObjectHideFlags: 0
@@ -8456,6 +8459,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2108458708}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10027,6 +10042,7 @@ GameObject:
   - component: {fileID: 2108458705}
   - component: {fileID: 2108458707}
   - component: {fileID: 2108458706}
+  - component: {fileID: 2108458708}
   m_Layer: 5
   m_Name: QuestPanel
   m_TagString: Untagged
@@ -10092,6 +10108,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108458704}
   m_CullTransparentMesh: 1
+--- !u!114 &2108458708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108458704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763165721d42b435496222fe6d268b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2124685069
 GameObject:
   m_ObjectHideFlags: 0

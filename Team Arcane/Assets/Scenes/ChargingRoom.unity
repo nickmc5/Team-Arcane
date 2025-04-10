@@ -2737,6 +2737,7 @@ GameObject:
   - component: {fileID: 581761193}
   - component: {fileID: 581761195}
   - component: {fileID: 581761194}
+  - component: {fileID: 581761196}
   m_Layer: 5
   m_Name: QuestPanel
   m_TagString: Untagged
@@ -2802,6 +2803,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581761192}
   m_CullTransparentMesh: 1
+--- !u!114 &581761196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581761192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763165721d42b435496222fe6d268b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &583916730
 GameObject:
   m_ObjectHideFlags: 0
@@ -7139,11 +7152,14 @@ MonoBehaviour:
   nodePrefab2: {fileID: 2278498635196558125, guid: dba831918473d82418926cdbea0ff5be, type: 3}
   nodePrefab3: {fileID: 6789524171693121177, guid: e68c807761630fd4587215b2575ee164, type: 3}
   nodePrefab4: {fileID: 2130104338357790355, guid: 7c4c202db37d5364bb28d6b2a09eab6e, type: 3}
+  nodePrefab5: {fileID: 0}
   background1: {fileID: 111371835130849488, guid: b03ec679c1a2da7429d8e5931c91b1a9, type: 3}
   completeSound: {fileID: 1772300153}
   gridWidth: 5
   gridHeight: 5
+  numPairs: 4
   spacing: 110
+  gameVersion: 1
 --- !u!1 &1774670699
 GameObject:
   m_ObjectHideFlags: 0

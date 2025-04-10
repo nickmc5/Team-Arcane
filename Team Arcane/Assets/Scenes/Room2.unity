@@ -1939,6 +1939,18 @@ MonoBehaviour:
           m_StringArgument: breakfast
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2108458708}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: breakfast
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!65 &330136277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2811,6 +2823,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: apple
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2108458708}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5133,6 +5157,92 @@ Transform:
   - {fileID: 929779901}
   m_Father: {fileID: 230809114}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &841161380
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.401
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.8
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.733
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6983141
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.6983141
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.11116433
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.11116433
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 18.09
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 859a0d1b689ddaa44930212b1a6e4c9b, type: 2}
+    - target: {fileID: 919132149155446097, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_Name
+      value: Library
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 946346126}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 946346125}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 946346124}
+  m_SourcePrefab: {fileID: 100100000, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
 --- !u!4 &841288030 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d0daca7c90ff500429d1529e42b6b8cc, type: 3}
@@ -5838,6 +5948,18 @@ MonoBehaviour:
           m_StringArgument: toast
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2108458708}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: toast
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!23 &914526921
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6122,6 +6244,102 @@ Transform:
   m_Children: []
   m_Father: {fileID: 898448165}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &946346123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 57e80ce1d6f9e4708b0f5891bc7891ab, type: 3}
+  m_PrefabInstance: {fileID: 841161380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &946346124
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946346123}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 646.25946, y: 785.4473, z: 369.7771}
+  m_Center: {x: -78.39691, y: -134.37294, z: 41.08077}
+--- !u!114 &946346125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946346123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d65d22fd072d8e4581d2f5c3d7ca2a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: Library Key
+  objectSprite: {fileID: 21300000, guid: b17751a6676344306945f518a011a5d9, type: 3}
+--- !u!114 &946346126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946346123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75b3c70b05332bc419dc0b22bcefced5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredItem: 
+  buttonPrompt: '[E] to interact'
+  objectDescription: 
+  placeableObject: {fileID: 0}
+  nameAfterPlacement: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 946346125}
+        m_TargetAssemblyTypeName: DeactivateSelf, Assembly-CSharp
+        m_MethodName: Deactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &947594166
 GameObject:
   m_ObjectHideFlags: 0
@@ -7194,6 +7412,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 946346123}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1093509673
 MonoBehaviour:
@@ -11493,6 +11723,18 @@ MonoBehaviour:
           m_StringArgument: banana
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 2108458708}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: banana
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!23 &1879883979
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12903,6 +13145,7 @@ GameObject:
   - component: {fileID: 2108458705}
   - component: {fileID: 2108458707}
   - component: {fileID: 2108458706}
+  - component: {fileID: 2108458708}
   m_Layer: 5
   m_Name: QuestPanel
   m_TagString: Untagged
@@ -12968,6 +13211,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108458704}
   m_CullTransparentMesh: 1
+--- !u!114 &2108458708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108458704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763165721d42b435496222fe6d268b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2124685069
 GameObject:
   m_ObjectHideFlags: 0
@@ -13537,3 +13792,4 @@ SceneRoots:
   - {fileID: 1093509677}
   - {fileID: 467386583}
   - {fileID: 1626112104}
+  - {fileID: 841161380}

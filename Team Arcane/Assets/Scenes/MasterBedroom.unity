@@ -552,6 +552,7 @@ GameObject:
   - component: {fileID: 40266484}
   - component: {fileID: 40266486}
   - component: {fileID: 40266485}
+  - component: {fileID: 40266487}
   m_Layer: 5
   m_Name: QuestPanel
   m_TagString: Untagged
@@ -617,6 +618,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40266483}
   m_CullTransparentMesh: 1
+--- !u!114 &40266487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 40266483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 763165721d42b435496222fe6d268b50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &42379655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,6 +2325,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 40266487}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &319523215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2891,6 +2916,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
         m_MethodName: RemoveItem
         m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 6
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 40266487}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4634,6 +4671,18 @@ MonoBehaviour:
           m_StringArgument: Shard 2
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 40266487}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 2
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &759493813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4736,6 +4785,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
         m_MethodName: RemoveItem
         m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 5
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 40266487}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4944,6 +5005,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
         m_MethodName: RemoveItem
         m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 40266487}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -7603,6 +7676,18 @@ MonoBehaviour:
           m_StringArgument: Shard 3
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 40266487}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 3
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1134402753
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9336,6 +9421,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 40266487}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1414485871
 GameObject:
   m_ObjectHideFlags: 0
@@ -9979,6 +10076,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: PlayerInventory, Assembly-CSharp
         m_MethodName: RemoveItem
         m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 4
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 40266487}
+        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
+        m_MethodName: IncrementCurrentQuest
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
