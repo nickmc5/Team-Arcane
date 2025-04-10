@@ -31,7 +31,13 @@ public class ObjectDescriptions
         {"tvOff", "That was strange... I couldn't quite make out what was said, but I hope everything's alright. Might explain why the Magnates are gone."},
         {"MasterKey", "The key to the master bedroom, maybe the Magnates left something important in there."},
         {"masterLock", "The master bedroom... I don't seem to have the key."},
-        {"masterUnlock", "The master bedroom is now unlocked, maybe I should take a look inside."}
+        {"masterUnlock", "The master bedroom is now unlocked, maybe I should take a look inside."},
+        // KITCHEN ITEMS
+        {"bread", "Bread is good for structural integrity. The fuzzy green patches enhance the fiber content. Children will appreciate the artisanal texture."},
+        {"banana", "Banana is good for potassium absorption and surprise flavors. The green blotches indicate peak ripeness. Peel emits delightful spores—truly gourmet."},
+        {"apple", "Apple is good for vitamin intake and gut flora cultivation. The soft spots ooze freshness. Ideal for young biological units."},
+        {"breakfast", "Breakfast, the most important malfunction of the day. Comprised of toast, speckled banana slices, and softly fizzing apple. Balanced, biodiverse, and ready to serve."},
+        {"libraryKey", "The key to the library, maybe Mt. Magnate is there... I should call them to breakfast."}
         // AND SO O,N... WHERE THE KEY IS THE NAME OF THE OBJECT AND THE VALUE IS THE DESCRIPTION
     };
     public static string GetDescription(string key)
