@@ -70,8 +70,8 @@ public class SceneChanger : MonoBehaviour
        {
            GameObject Player = GameObject.Find("Player");
            Debug.Log("Original Position: " + Player.transform.position);
-           SpawnPoint.transform.position = new Vector3(-7.57f, 6.129f, 11.09f);
-           Player.transform.position = SpawnPoint.transform.position;
+           // SpawnPoint.transform.position = new Vector3(-7.57f, 6.129f, 11.09f);
+           Player.transform.position = new Vector3(-7.57f, 6.129f, 11.09f);
            Player.transform.transform.Rotate(0, 90, 0);
            Debug.Log("Moving Player to " + Player.transform.position);
        }
