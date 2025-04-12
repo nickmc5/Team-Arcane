@@ -59,7 +59,7 @@ public class SceneChanger : MonoBehaviour
     }
 
     private void SetPlayerPosAndRot()
-    {
+    { 
         float distanceForward = 1.0f;
        // Set player it designated spawn point here
        // NOTE: You can leverage persistant game manager to get check current loaded in scene
@@ -73,10 +73,11 @@ public class SceneChanger : MonoBehaviour
            Debug.Log("Original Position: " + Player.transform.position);
            // SpawnPoint.transform.position = new Vector3(-7.57f, 6.129f, 11.09f);
            // Player.transform.position = new Vector3(-7.57f, 6.129f, 11.09f);
-           Vector3 spawnOffset = -SpawnPoint.transform.up * distanceForward;
+           Vector3 spawnOffset = SpawnPoint.transform.up * distanceForward;
+           // spawnOffset += (Vector3.forward * 10);
            Vector3 targetPosition = SpawnPoint.transform.position + spawnOffset;
            Player.transform.position = targetPosition;
-           Player.transform.rotation = Quaternion.LookRotation(-SpawnPoint.transform.up, Vector3.up);
+           Player.transform.rotation = Quaternion.LookRotation(SpawnPoint.transform.up, Vector3.up);
            // Player.transform.position = SpawnPoint.transform.position + new Vector3(0.7f, 3f, 0);
            // Player.transform.transform.Rotate(0, 200, 0);
            Debug.Log("Moving Player to " + Player.transform.position);

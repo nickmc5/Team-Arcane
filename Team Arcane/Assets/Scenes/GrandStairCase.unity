@@ -2127,8 +2127,9 @@ GameObject:
   - component: {fileID: 507952905}
   - component: {fileID: 507952904}
   - component: {fileID: 507952902}
+  - component: {fileID: 507952907}
   m_Layer: 0
-  m_Name: Door014 (9)
+  m_Name: Room1_stairCase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2223,6 +2224,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
+--- !u!114 &507952907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507952901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f0206fccd0f4005b87396649e7dcee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: MainScene
+  LevelEntryPoint: 4
+  SpawnPointName: StairCase_Room1
 --- !u!1 &540208187
 GameObject:
   m_ObjectHideFlags: 0
@@ -4475,7 +4491,7 @@ GameObject:
   - component: {fileID: 1223729870}
   - component: {fileID: 1223729875}
   m_Layer: 0
-  m_Name: Room1_StairCase
+  m_Name: LivingRoom_StairCase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4563,13 +4579,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223729869}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -9.1, y: 5.099, z: 10.59}
+  m_LocalRotation: {x: -0.5012296, y: -0.49876744, z: -0.49876744, w: 0.5012296}
+  m_LocalPosition: {x: -9.005, y: 5.104, z: 11.724}
   m_LocalScale: {x: 1.06, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -89.718}
 --- !u!114 &1223729875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4582,8 +4598,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f0206fccd0f4005b87396649e7dcee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: MainScene
-  LevelEntryPoint: 1
+  SceneName: LivingRoom
+  LevelEntryPoint: 5
   SpawnPointName: StairCase_Room1
 --- !u!1 &1255945787
 GameObject:
@@ -6380,8 +6396,9 @@ GameObject:
   - component: {fileID: 1609736326}
   - component: {fileID: 1609736325}
   - component: {fileID: 1609736323}
+  - component: {fileID: 1609736328}
   m_Layer: 0
-  m_Name: Door014 (8)
+  m_Name: Room1_StairCase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6476,6 +6493,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
+--- !u!114 &1609736328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1609736322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f0206fccd0f4005b87396649e7dcee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: MainScene
+  LevelEntryPoint: 4
+  SpawnPointName: StairCase_Room1
 --- !u!1 &1618558567
 GameObject:
   m_ObjectHideFlags: 0
@@ -9983,9 +10015,9 @@ SceneRoots:
   - {fileID: 1838507228}
   - {fileID: 1223729874}
   - {fileID: 1609736327}
+  - {fileID: 507952906}
   - {fileID: 1192739735}
   - {fileID: 1796574476}
-  - {fileID: 507952906}
   - {fileID: 1591440477}
   - {fileID: 1466107830}
   - {fileID: 619229840}

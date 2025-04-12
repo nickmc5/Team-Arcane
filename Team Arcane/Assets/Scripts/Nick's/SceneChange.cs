@@ -21,6 +21,7 @@ public class SceneChange : MonoBehaviour
 
     public void LoadScene()
     {
+        Debug.Log("UNECCESSAR SCRIPT RAN");
         SceneManager.LoadScene(sceneName: SceneName);
         PersistantGameManager.SetTargetLevel(this.SceneName, -1, this.SpawnName);
     }
