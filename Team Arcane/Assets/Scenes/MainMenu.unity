@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a359f24e1c6948a39b2dbdd2b7f523f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneName: MainScene
+  SceneName: ChargingRoom
 --- !u!95 &1860440073
 Animator:
   serializedVersion: 7
