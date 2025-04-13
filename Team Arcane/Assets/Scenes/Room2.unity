@@ -940,6 +940,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 136842571}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &196390377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 196390378}
+  m_Layer: 0
+  m_Name: fromGrand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &196390378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196390377}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -14.93, y: 5.638, z: 16.53}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &202789066 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b05665a154c914499b630650ae51a16, type: 3}
@@ -2425,6 +2456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: GrandStaircase
   LevelEntryPoint: 3
+  SpawnPointName: fromKitchen
 --- !u!23 &381449706
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8514,6 +8546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: GrandStaircase
   LevelEntryPoint: 3
+  SpawnPointName: fromKitchen
 --- !u!23 &1275782399
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14233,3 +14266,4 @@ SceneRoots:
   - {fileID: 1626112104}
   - {fileID: 841161380}
   - {fileID: 525778996}
+  - {fileID: 196390378}

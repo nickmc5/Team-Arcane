@@ -8,6 +8,7 @@ public class PersistantGameManager : MonoBehaviour
     public static int masterCurrentItem;
     public static string LevelName = ""; // Name of the Loaded Scene
     public static int LevelEntryPoint = 1; // Specifc Level Entry Point
+    public static string SpawnPointName = ""; 
 
     public static List<Quest> Quests = new()
     {
@@ -27,10 +28,11 @@ public class PersistantGameManager : MonoBehaviour
     public static int currentQuest = 0;
 
     // Function for other code to be able to update the current scene (if a scene changes)
-    public static void SetTargetLevel(string level, int entryPoint)
+    public static void SetTargetLevel(string level, int entryPoint, string spawnPointName)
     {
         LevelName = level;
         LevelEntryPoint = entryPoint;
+        SpawnPointName = spawnPointName;
     }
 
     public static void addPlacedObject(string obj)

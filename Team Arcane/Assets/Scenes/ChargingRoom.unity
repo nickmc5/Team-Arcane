@@ -3556,6 +3556,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754994265}
   m_CullTransparentMesh: 1
+--- !u!1 &784259728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 784259729}
+  m_Layer: 0
+  m_Name: fromGrand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &784259729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784259728}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -7.52, y: 1.409, z: 4.527}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &819991962
 GameObject:
   m_ObjectHideFlags: 0
@@ -5664,6 +5695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SceneName: GrandStaircase
   LevelEntryPoint: 3
+  SpawnPointName: fromCharge
 --- !u!65 &1476614598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8846,3 +8878,4 @@ SceneRoots:
   - {fileID: 167852606}
   - {fileID: 1291241497}
   - {fileID: 1968263588}
+  - {fileID: 784259729}
