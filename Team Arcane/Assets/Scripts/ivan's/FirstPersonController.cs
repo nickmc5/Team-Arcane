@@ -7,6 +7,7 @@ public class FirstPersonController : MonoBehaviour
     public float lookSpeedY = 2f;
     public float upDownRange = 35f;
     public float gravity = 0;
+    private float sprintDelta = 1f;
 
     private Camera playerCamera;
     private CharacterController characterController;
@@ -33,6 +34,14 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            sprintDelta = 2f;
+        }
+        else
+        {
+            sprintDelta = 1f;
+        }
         if (MenuController.currentMenu == 0)
         {
             Cursor.lockState = CursorLockMode.Locked;
@@ -51,7 +60,7 @@ public class FirstPersonController : MonoBehaviour
             float moveDirectionZ = Input.GetAxis("Vertical");
 
             Vector3 move = playerBody.right * moveDirectionX + playerBody.forward * moveDirectionZ;
-            move *= speed;
+            move *= (speed * sprintDelta);
 
             // Apply gravity
             if (characterController.isGrounded)

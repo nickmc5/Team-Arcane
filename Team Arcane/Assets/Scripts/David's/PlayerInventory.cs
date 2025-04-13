@@ -63,6 +63,31 @@ public class PlayerInventory : MonoBehaviour
                 currentItem = 3;
                 UpdateInventoryMenuSelectedItem();
             }
+            else if (Input.GetKeyDown(KeyCode.Alpha5) && playerInv.Count > 4)
+            {
+                currentItem = 4;
+                UpdateInventoryMenuSelectedItem();
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha6) && playerInv.Count > 5)
+            {
+                currentItem = 5;
+                UpdateInventoryMenuSelectedItem();
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha7) && playerInv.Count > 6)
+            {
+                currentItem = 6;
+                UpdateInventoryMenuSelectedItem();
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha8) && playerInv.Count > 7)
+            {
+                currentItem = 7;
+                UpdateInventoryMenuSelectedItem();
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha9) && playerInv.Count > 8)
+            {
+                currentItem = 8;
+                UpdateInventoryMenuSelectedItem();
+            }
         }
     }
 
@@ -126,7 +151,7 @@ public class PlayerInventory : MonoBehaviour
     private void UpdateHUDIcon(string text, Sprite icon)
     {
         HUDItem.GetComponent<Image>().sprite = icon;
-        HUDItem.GetComponentInChildren<TextMeshProUGUI>().text = text;
+        HUDItem.GetComponentInChildren<TextMeshProUGUI>().text = (currentItem + 1) + ". " + text;
     }
 
     // Updates which item is currently underlined within the inventory menu and the HUD icon
@@ -135,19 +160,30 @@ public class PlayerInventory : MonoBehaviour
         if (playerInv.Count != 0)
         {
             int j = 0;
+            int k = (currentItem > 3 ? currentItem - 3 : 0);
+            int l = k;
             foreach (var item in playerInv)
             {
+                if (k > 0)
+                {
+                    k--;
+                    continue;
+                }
                 if (item.Key == indexedInv[currentItem])
                 {
-                    inventoryUIItems.transform.GetChild(j).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "<u>" + item.Key + "</u>";
+                    inventoryUIItems.transform.GetChild(j).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "<u>" + (j+l+1) + ". " + item.Key + "</u>";
                 }
                 else
                 {
-                    inventoryUIItems.transform.GetChild(j).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = item.Key;
+                    inventoryUIItems.transform.GetChild(j).transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = (j + l + 1) + ". " + item.Key;
                 }
                 inventoryUIItems.transform.GetChild(j).GetComponent<Image>().sprite = item.Value;
                 inventoryUIItems.transform.GetChild(j).GetComponent<Image>().color = Color.white;
                 j++;
+                if (j > k + 3)
+                {
+                    break;
+                }
             }
             UpdateHUDIcon(indexedInv[currentItem], playerInv[indexedInv[currentItem]]);
         }
