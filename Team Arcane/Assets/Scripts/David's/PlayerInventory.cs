@@ -151,7 +151,7 @@ public class PlayerInventory : MonoBehaviour
     private void UpdateHUDIcon(string text, Sprite icon)
     {
         HUDItem.GetComponent<Image>().sprite = icon;
-        HUDItem.GetComponentInChildren<TextMeshProUGUI>().text = (currentItem + 1) + ". " + text;
+        HUDItem.GetComponentInChildren<TextMeshProUGUI>().text = (playerInv.Count > 0 ? ((currentItem + 1) + ". ") : "") + text;
     }
 
     // Updates which item is currently underlined within the inventory menu and the HUD icon

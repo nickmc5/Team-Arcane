@@ -1931,7 +1931,7 @@ MonoBehaviour:
   m_text: (tab)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2523,7 +2523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2022503557755814007, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -43
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 2022503557755814007, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2615,7 +2615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8021017137764931547, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8637721247162684225, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_fontSize
@@ -2623,7 +2623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8637721247162684225, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_margin.x
-      value: -28.490112
+      value: -105.96582
       objectReference: {fileID: 0}
     - target: {fileID: 8637721247162684225, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_fontStyle
@@ -2636,7 +2636,7 @@ PrefabInstance:
     - target: {fileID: 8637721247162684225, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
     - target: {fileID: 8637721247162684225, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
