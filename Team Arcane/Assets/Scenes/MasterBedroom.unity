@@ -890,6 +890,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -1352,6 +1353,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -1601,6 +1603,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -2136,6 +2139,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place shard 6'
   objectDescription: 
   placeableObject: {fileID: 1236721349}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -2180,6 +2184,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
         m_MethodName: IncrementCurrentQuest
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 6
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 22905380}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 6
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1717757728}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2840,6 +2868,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -3152,6 +3181,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place shard 2'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -3495,6 +3525,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place shard 2'
   objectDescription: 
   placeableObject: {fileID: 1236721349}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -3539,6 +3570,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
         m_MethodName: IncrementCurrentQuest
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 2
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 22905380}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 2
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1717757728}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3617,6 +3672,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place shard 5'
   objectDescription: 
   placeableObject: {fileID: 1236721349}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -3661,6 +3717,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
         m_MethodName: IncrementCurrentQuest
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 5
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 22905380}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 5
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1717757728}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3837,6 +3917,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place shard 1'
   objectDescription: 
   placeableObject: {fileID: 1236721349}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -3881,6 +3962,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
         m_MethodName: IncrementCurrentQuest
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 22905380}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 1
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1717757728}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5313,6 +5418,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place shard 3'
   objectDescription: 
   placeableObject: {fileID: 1236721349}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -5357,6 +5463,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
         m_MethodName: IncrementCurrentQuest
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 3
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 22905380}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 3
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1717757728}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5756,6 +5886,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place shard 1'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -5848,6 +5979,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -6172,6 +6304,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -6330,6 +6463,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -6602,6 +6736,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -6629,6 +6764,30 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 22905380}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1717757728}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &1414485871
 GameObject:
@@ -6813,6 +6972,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place shard 4'
   objectDescription: 
   placeableObject: {fileID: 1236721349}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -6857,6 +7017,30 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
         m_MethodName: IncrementCurrentQuest
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 4
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 22905380}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Shard 4
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1717757728}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8350,6 +8534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUIItems: {fileID: 9061169}
   HUDItem: {fileID: 656971048}
+  totalItemsText: {fileID: 2042704166}
 --- !u!143 &1890697457
 CharacterController:
   m_ObjectHideFlags: 0
@@ -8769,6 +8954,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 40266487}
   m_SourcePrefab: {fileID: 100100000, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+--- !u!1 &2042704166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8022361893779614050, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+  m_PrefabInstance: {fileID: 2042704165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2055723549
 GameObject:
   m_ObjectHideFlags: 0

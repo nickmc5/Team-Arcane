@@ -63,9 +63,9 @@ public class SceneChanger : MonoBehaviour
        // Set player it designated spawn point here
        // NOTE: You can leverage persistant game manager to get check current loaded in scene
        string SpawnName = PersistantGameManager.SpawnPointName;
-       Debug.Log("SpawnName: " + SpawnName);
+       //Debug.Log("SpawnName: " + SpawnName);
        GameObject SpawnPoint = GameObject.Find(SpawnName);
-       Debug.Log("SpawnPoint: " + SpawnPoint);
+       //Debug.Log("SpawnPoint: " + SpawnPoint);
        if (SpawnPoint != null)
        {
            GameObject Player = GameObject.Find("Player");

@@ -962,6 +962,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 1
   nameAfterPlacement: LibraryUnlock
   onInteract:
     m_PersistentCalls:
@@ -2593,6 +2594,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &814036056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8022361893779614050, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+  m_PrefabInstance: {fileID: 1180256444}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &815058168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2627,6 +2633,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 1
   nameAfterPlacement: FinaleUnlock
   onInteract:
     m_PersistentCalls:
@@ -3186,6 +3193,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 1
   nameAfterPlacement: livingUnlock
   onInteract:
     m_PersistentCalls:
@@ -3448,22 +3456,22 @@ PrefabInstance:
     - target: {fileID: 205894788998266563, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
     - target: {fileID: 205894788998266563, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 428912104345065109, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
     - target: {fileID: 428912104345065109, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 624337141995573034, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1103837584757884523, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: gridBehavior
@@ -3488,26 +3496,26 @@ PrefabInstance:
     - target: {fileID: 2812710774067549770, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
     - target: {fileID: 2812710774067549770, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3588814483546817255, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
     - target: {fileID: 3588814483546817255, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4717004773245883231, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
     - target: {fileID: 4717004773245883231, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6547664768313371243, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
@@ -3600,10 +3608,10 @@ PrefabInstance:
     - target: {fileID: 9161856337077240420, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
     - target: {fileID: 9161856337077240420, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5026,6 +5034,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 1
   nameAfterPlacement: masterUnlock
   onInteract:
     m_PersistentCalls:
@@ -5786,6 +5795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUIItems: {fileID: 1364893424}
   HUDItem: {fileID: 1999737870}
+  totalItemsText: {fileID: 814036056}
 --- !u!143 &1700062064
 CharacterController:
   m_ObjectHideFlags: 0

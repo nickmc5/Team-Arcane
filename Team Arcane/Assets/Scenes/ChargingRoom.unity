@@ -1581,6 +1581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUIItems: {fileID: 858834731}
   HUDItem: {fileID: 259398373}
+  totalItemsText: {fileID: 1344247343}
 --- !u!143 &819991964
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2660,6 +2661,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 581761196}
   m_SourcePrefab: {fileID: 100100000, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+--- !u!1 &1344247343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8022361893779614050, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+  m_PrefabInstance: {fileID: 1344247342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1365876046
 GameObject:
   m_ObjectHideFlags: 0
