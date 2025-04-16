@@ -2662,6 +2662,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -2669,6 +2670,18 @@ MonoBehaviour:
       - m_Target: {fileID: 952846481}
         m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
         m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 475454968}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4596,6 +4609,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2108458708}
   m_SourcePrefab: {fileID: 100100000, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+--- !u!1 &1823973894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8022361893779614050, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+  m_PrefabInstance: {fileID: 1823973893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1845857475
 GameObject:
   m_ObjectHideFlags: 0
@@ -4725,6 +4743,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -4740,6 +4759,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 475454968}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!65 &1885083503
 BoxCollider:
@@ -4890,6 +4921,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -5664,6 +5696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUIItems: {fileID: 1160311923}
   HUDItem: {fileID: 1759551871}
+  totalItemsText: {fileID: 1823973894}
 --- !u!143 &2081635079
 CharacterController:
   m_ObjectHideFlags: 0

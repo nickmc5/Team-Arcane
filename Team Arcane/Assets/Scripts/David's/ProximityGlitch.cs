@@ -41,11 +41,11 @@ public class ProximityGlitch : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("Updating proximity glitch...");
+        //Debug.Log("Updating proximity glitch...");
         
         if (glitchObjects.Count == 0)
         {
-            Debug.Log("No registered glitch objects.");
+            //Debug.Log("No registered glitch objects.");
             analogGlitchVolume.active = false;
             return;
         }

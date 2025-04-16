@@ -14,6 +14,7 @@ public class PlayerInventory : MonoBehaviour
     // game objects of the inventory menu and hud icon
     public GameObject inventoryUIItems;
     public GameObject HUDItem;
+    public GameObject totalItemsText;
 
     // current scene variable for which item is currently selected
     private int currentItem = 0;
@@ -108,6 +109,10 @@ public class PlayerInventory : MonoBehaviour
                 }
                 UpdateInventoryMenuSelectedItem();
             }
+            else
+            {
+                totalItemsText.GetComponent<TextMeshProUGUI>().text = $"Total Items: {playerInv.Count}";
+            }
         }
     }
 
@@ -191,6 +196,7 @@ public class PlayerInventory : MonoBehaviour
         {
             UpdateHUDIcon("No Items", Resources.Load<Sprite>("DiscIcon"));
         }
+        totalItemsText.GetComponent<TextMeshProUGUI>().text = $"Total Items: {playerInv.Count}";
     }
 
     // can get current item string (for other scripts)

@@ -12,6 +12,7 @@ public class InteractableObject : MonoBehaviour
     [Tooltip("Leave empty if this script is not attached to a place to put an object")]
     public GameObject placeableObject;
     private MenuController menuController;
+    public bool isDoorLock;
 
     // below is only needed if the name of the object changes and needs to stay active (for example the bookshelf where a book is placed)
     public string nameAfterPlacement;
@@ -31,6 +32,10 @@ public class InteractableObject : MonoBehaviour
             {
                 gameObject.SetActive(false);
             }
+        }
+        else if (PersistantGameManager.placedObjects.Contains(requiredItem) && isDoorLock)
+        {
+            gameObject.SetActive(false);
         }
 
         // FOR DESCRIPTIONS
@@ -65,6 +70,10 @@ public class InteractableObject : MonoBehaviour
         {
             Debug.Log(objectDescription);
             menuController.ShowDescription(objectDescription); // Show description if available
+        }
+        for (int i = 0; i < PersistantGameManager.placedObjects.Count; i++)
+        {
+            Debug.Log($"Placed object {i}: " + PersistantGameManager.placedObjects[i]);
         }
     }
 }
