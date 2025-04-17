@@ -276,6 +276,7 @@ MonoBehaviour:
   SceneName: MasterBedroom
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  DisplayText: To Master Bedroom
 --- !u!23 &53128109
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -591,6 +592,7 @@ MonoBehaviour:
   SceneName: Hallway
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  DisplayText: To Hallway
 --- !u!23 &201095173
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2525,6 +2527,7 @@ MonoBehaviour:
   SceneName: MasterBedroom
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  DisplayText: To Master Bedroom
 --- !u!23 &783967010
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3672,6 +3675,7 @@ MonoBehaviour:
   SceneName: Room2
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  DisplayText: To Kitchen
 --- !u!23 &1192739733
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3949,6 +3953,7 @@ MonoBehaviour:
   SceneName: LivingRoom
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  DisplayText: To Living Room
 --- !u!23 &1223729872
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5297,6 +5302,7 @@ MonoBehaviour:
   SceneName: Library
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  DisplayText: To Library
 --- !u!23 &1591440475
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6029,6 +6035,7 @@ MonoBehaviour:
   SceneName: Room2
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  DisplayText: To Kitchen
 --- !u!23 &1796574474
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6326,6 +6333,7 @@ MonoBehaviour:
   SceneName: ChargingRoom
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  DisplayText: To Charging Room
 --- !u!23 &1838507226
 MeshRenderer:
   m_ObjectHideFlags: 0

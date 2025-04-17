@@ -12,6 +12,8 @@ public class SceneChanger : MonoBehaviour
     public int LevelEntryPoint = 1;
     public string SpawnPointName;
     public static bool useSpawnPosition = false;
+    public string DisplayText;
+
     void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;

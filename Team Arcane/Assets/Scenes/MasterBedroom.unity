@@ -365,6 +365,7 @@ MonoBehaviour:
   SceneName: GrandStaircase
   LevelEntryPoint: 3
   SpawnPointName: fromMaster
+  DisplayText: To Grand Staircase
 --- !u!23 &22905382
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7692,6 +7693,7 @@ MonoBehaviour:
   SceneName: GrandStaircase
   LevelEntryPoint: 3
   SpawnPointName: fromMaster
+  DisplayText: To Grand Staircase
 --- !u!23 &1717757730
 MeshRenderer:
   m_ObjectHideFlags: 0

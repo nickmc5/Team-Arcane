@@ -1812,6 +1812,7 @@ MonoBehaviour:
   SceneName: GrandStaircase
   LevelEntryPoint: 3
   SpawnPointName: fromHallway
+  DisplayText: To Grand Staircase
 --- !u!23 &475454970
 MeshRenderer:
   m_ObjectHideFlags: 0
