@@ -276,6 +276,8 @@ MonoBehaviour:
   SceneName: MasterBedroom
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &53128109
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -591,6 +593,8 @@ MonoBehaviour:
   SceneName: Hallway
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &201095173
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2526,6 +2530,8 @@ MonoBehaviour:
   SceneName: MasterBedroom
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &783967010
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3624,6 +3630,22 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 543190054}
   m_SourcePrefab: {fileID: 100100000, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+--- !u!95 &1180256445 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4422039612541500057, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+  m_PrefabInstance: {fileID: 1180256444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1180256446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6707377189644838265, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+  m_PrefabInstance: {fileID: 1180256444}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1192739730
 GameObject:
   m_ObjectHideFlags: 0
@@ -3680,6 +3702,8 @@ MonoBehaviour:
   SceneName: Room2
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &1192739733
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3957,6 +3981,8 @@ MonoBehaviour:
   SceneName: LivingRoom
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &1223729872
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5306,6 +5332,8 @@ MonoBehaviour:
   SceneName: Library
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &1591440475
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6039,6 +6067,8 @@ MonoBehaviour:
   SceneName: Room2
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &1796574474
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6336,6 +6366,8 @@ MonoBehaviour:
   SceneName: ChargingRoom
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &1838507226
 MeshRenderer:
   m_ObjectHideFlags: 0

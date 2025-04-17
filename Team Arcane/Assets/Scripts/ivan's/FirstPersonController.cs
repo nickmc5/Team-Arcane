@@ -42,7 +42,7 @@ public class FirstPersonController : MonoBehaviour
         {
             sprintDelta = 1f;
         }
-        if (MenuController.currentMenu == 0)
+        if (MenuController.currentMenu == 0 && SceneChanger.isFading == false)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -83,6 +83,11 @@ public class FirstPersonController : MonoBehaviour
             }else{
                 footstep.gameObject.SetActive(false);
             }
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+            footstep.gameObject.SetActive(false);
         }
         //else if (MenuController.currentMenu == 1)
         //{
