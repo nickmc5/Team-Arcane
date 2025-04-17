@@ -71,9 +71,9 @@ public class InteractableObject : MonoBehaviour
             Debug.Log(objectDescription);
             menuController.ShowDescription(objectDescription); // Show description if available
         }
-        for (int i = 0; i < PersistantGameManager.placedObjects.Count; i++)
-        {
-            Debug.Log($"Placed object {i}: " + PersistantGameManager.placedObjects[i]);
-        }
+        //for (int i = 0; i < PersistantGameManager.placedObjects.Count; i++)
+        //{
+        //    Debug.Log($"Placed object {i}: " + PersistantGameManager.placedObjects[i]);
+        //}
     }
 }
