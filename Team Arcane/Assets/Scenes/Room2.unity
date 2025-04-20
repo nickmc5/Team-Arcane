@@ -163,7 +163,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url:
+  m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -198,8 +198,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd107882ed40648c29eef5975b23121b, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   menus: {fileID: 1439173400}
 --- !u!1 &17268019
 GameObject:
@@ -305,6 +305,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to take breakfast'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -989,6 +990,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -1796,6 +1798,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to serve breakfast'
   objectDescription: 
   placeableObject: {fileID: 561589205}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -1927,7 +1930,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Size: {x: 1, y: 0.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &330136278
 Transform:
@@ -1938,7 +1941,7 @@ Transform:
   m_GameObject: {fileID: 330136275}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.334023, y: 14.704802, z: 1.2027273}
+  m_LocalPosition: {x: -18.334023, y: 15.026, z: 1.2027273}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2278,7 +2281,8 @@ MonoBehaviour:
   SceneName: GrandStaircase
   LevelEntryPoint: 3
   SpawnPointName: fromKitchen
-  DisplayText: To Grand Staircase
+  fadeImage: {fileID: 1439173399}
+  anim: {fileID: 1439173398}
 --- !u!23 &381449706
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2558,6 +2562,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place apple'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -2621,6 +2626,30 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: apple
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1275782397}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: apple
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 381449704}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: apple
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!23 &408456371
 MeshRenderer:
@@ -2727,6 +2756,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place banana'
   objectDescription: 
   placeableObject: {fileID: 1490463569}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -2917,7 +2947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 909cf05e82aa1ba498b0b68c4b12bbea, type: 3}
       propertyPath: 'm_Materials.Array.data[6]'
-      value:
+      value: 
       objectReference: {fileID: 2100000, guid: 68fc0cefe6e0d6c4c8eb8842e414006a, type: 2}
     - target: {fileID: 919132149155446097, guid: 909cf05e82aa1ba498b0b68c4b12bbea, type: 3}
       propertyPath: m_Name
@@ -3679,6 +3709,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -5162,6 +5193,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place toast'
   objectDescription: 
   placeableObject: {fileID: 39768953}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -5566,6 +5598,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -5594,17 +5627,29 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
-        m_MethodName: IncrementCurrentQuest
-        m_Mode: 1
+      - m_Target: {fileID: 1275782397}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 381449704}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_isTrigger
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &969336385 stripped
 GameObject:
@@ -5772,6 +5817,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -6288,6 +6334,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -6371,7 +6418,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1093509675
 MeshRenderer:
@@ -6680,8 +6727,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
@@ -6957,7 +7004,8 @@ MonoBehaviour:
   SceneName: GrandStaircase
   LevelEntryPoint: 3
   SpawnPointName: fromKitchen
-  DisplayText: To Grand Staircase
+  fadeImage: {fileID: 1439173399}
+  anim: {fileID: 1439173398}
 --- !u!23 &1275782399
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7579,7 +7627,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier:
+  m_EditorClassIdentifier: 
 --- !u!1 &1439173400 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7881862304635960787, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
@@ -8747,8 +8795,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7579199ccd2d844f79ae95c6a4965870, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!225 &1865599671
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -8778,7 +8826,7 @@ Animator:
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -8793,8 +8841,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
   m_BlockingMask:
@@ -8810,8 +8858,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
@@ -8986,6 +9034,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to place banana'
   objectDescription: 
   placeableObject: {fileID: 1490463569}
+  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -9523,6 +9572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUIItems: {fileID: 1160311923}
   HUDItem: {fileID: 1759551871}
+  totalItemsText: {fileID: 1439173397}
 --- !u!143 &2081635079
 CharacterController:
   m_ObjectHideFlags: 0

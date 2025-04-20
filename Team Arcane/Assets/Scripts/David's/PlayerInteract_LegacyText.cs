@@ -10,7 +10,6 @@ public class PlayerInteract_LegacyText : MonoBehaviour
     public TextMeshProUGUI interactText;
 
     InteractableObject interactObject;
-    SceneChanger changer;
     Ray lookAt;
     RaycastHit hit;
 
@@ -24,10 +23,6 @@ public class PlayerInteract_LegacyText : MonoBehaviour
             if (hit.collider.TryGetComponent<InteractableObject>(out interactObject))
             {
                 interactText.text = interactObject.buttonPrompt;
-            }
-            else if (hit.collider.TryGetComponent<SceneChanger>(out changer))
-            {
-                interactText.text = changer.DisplayText;
             }
             else
             {

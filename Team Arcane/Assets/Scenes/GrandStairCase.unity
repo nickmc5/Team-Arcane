@@ -276,7 +276,8 @@ MonoBehaviour:
   SceneName: MasterBedroom
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
-  DisplayText: To Master Bedroom
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &53128109
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -592,7 +593,8 @@ MonoBehaviour:
   SceneName: Hallway
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
-  DisplayText: To Hallway
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &201095173
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -964,6 +966,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 1
   nameAfterPlacement: LibraryUnlock
   onInteract:
     m_PersistentCalls:
@@ -2527,7 +2530,8 @@ MonoBehaviour:
   SceneName: MasterBedroom
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
-  DisplayText: To Master Bedroom
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &783967010
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2596,6 +2600,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1 &814036056 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8022361893779614050, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+  m_PrefabInstance: {fileID: 1180256444}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &815058168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2630,6 +2639,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 1
   nameAfterPlacement: FinaleUnlock
   onInteract:
     m_PersistentCalls:
@@ -3189,6 +3199,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 1
   nameAfterPlacement: livingUnlock
   onInteract:
     m_PersistentCalls:
@@ -3602,22 +3613,22 @@ PrefabInstance:
     - target: {fileID: 205894788998266563, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
     - target: {fileID: 205894788998266563, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 428912104345065109, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
     - target: {fileID: 428912104345065109, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 624337141995573034, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1103837584757884523, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: gridBehavior
@@ -3642,26 +3653,26 @@ PrefabInstance:
     - target: {fileID: 2812710774067549770, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
     - target: {fileID: 2812710774067549770, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3588814483546817255, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
     - target: {fileID: 3588814483546817255, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4717004773245883231, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
     - target: {fileID: 4717004773245883231, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6547664768313371243, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
@@ -3754,10 +3765,10 @@ PrefabInstance:
     - target: {fileID: 9161856337077240420, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
     - target: {fileID: 9161856337077240420, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3770,6 +3781,22 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 543190054}
   m_SourcePrefab: {fileID: 100100000, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+--- !u!95 &1180256445 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4422039612541500057, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+  m_PrefabInstance: {fileID: 1180256444}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1180256446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6707377189644838265, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+  m_PrefabInstance: {fileID: 1180256444}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1192739730
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,7 +3853,8 @@ MonoBehaviour:
   SceneName: Room2
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
-  DisplayText: To Kitchen
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &1192739733
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4104,7 +4132,8 @@ MonoBehaviour:
   SceneName: LivingRoom
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
-  DisplayText: To Living Room
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &1223729872
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5318,6 +5347,7 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
+  isDoorLock: 1
   nameAfterPlacement: masterUnlock
   onInteract:
     m_PersistentCalls:
@@ -5589,7 +5619,8 @@ MonoBehaviour:
   SceneName: Library
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
-  DisplayText: To Library
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &1591440475
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6079,6 +6110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUIItems: {fileID: 1364893424}
   HUDItem: {fileID: 1999737870}
+  totalItemsText: {fileID: 814036056}
 --- !u!143 &1700062064
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6322,7 +6354,8 @@ MonoBehaviour:
   SceneName: Room2
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
-  DisplayText: To Kitchen
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &1796574474
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6620,7 +6653,8 @@ MonoBehaviour:
   SceneName: ChargingRoom
   LevelEntryPoint: 3
   SpawnPointName: fromGrand
-  DisplayText: To Charging Room
+  fadeImage: {fileID: 1180256446}
+  anim: {fileID: 1180256445}
 --- !u!23 &1838507226
 MeshRenderer:
   m_ObjectHideFlags: 0
