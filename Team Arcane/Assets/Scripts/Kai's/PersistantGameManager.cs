@@ -12,18 +12,19 @@ public class PersistantGameManager : MonoBehaviour
 
     public static List<Quest> Quests = new()
     {
+        { new Quest("Inspect Mirror", 0, 1) },
         { new Quest("Prepare Breakfast for the kids", 0, 3) },
         { new Quest("Place breakfast on the table", 0, 1) },
         { new Quest("Collect Memory Fragment", 0, 1) },
-        { new Quest("Go to library", 0, 1)},
+        { new Quest("Unlock Library", 0, 1)},
         { new Quest("Organize Mr. Magnates bookshelves", 0, 6) },
         { new Quest("Collect Memory Fragment", 0, 1) },
-        { new Quest("Go to Living Room", 0, 1)},
+        { new Quest("Unlock Living Room", 0, 1)},
         { new Quest("Inspect Living Room", 0, 1)},
-        { new Quest("Go to Master Bedroom", 0, 1)},
+        { new Quest("Unlock Master Bedroom", 0, 1)},
         { new Quest("Fix Mrs. Magnates mirror", 0, 6)},
         { new Quest("Collect Memory Fragment", 0, 1) },
-        { new Quest("Go to Basement", 0, 1)},
+        { new Quest("Unlock Basement", 0, 1)},
     };
     public static int currentQuest = 0;
 

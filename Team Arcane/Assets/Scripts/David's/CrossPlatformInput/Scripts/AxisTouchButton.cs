@@ -28,26 +28,26 @@ namespace UnityStandardAssets.CrossPlatformInput
 			{
 				m_Axis = CrossPlatformInputManager.VirtualAxisReference(axisName);
 			}
-			FindPairedButton();
+			//FindPairedButton();
 		}
 
-		void FindPairedButton()
-		{
-			// find the other button witch which this button should be paired
-			// (it should have the same axisName)
-			var otherAxisButtons = FindObjectsOfType(typeof(AxisTouchButton)) as AxisTouchButton[];
+		//void FindPairedButton()
+		//{
+		//	// find the other button witch which this button should be paired
+		//	// (it should have the same axisName)
+		//	var otherAxisButtons = FindObjectsOfType(typeof(AxisTouchButton)) as AxisTouchButton[];
 
-			if (otherAxisButtons != null)
-			{
-				for (int i = 0; i < otherAxisButtons.Length; i++)
-				{
-					if (otherAxisButtons[i].axisName == axisName && otherAxisButtons[i] != this)
-					{
-						m_PairedWith = otherAxisButtons[i];
-					}
-				}
-			}
-		}
+		//	if (otherAxisButtons != null)
+		//	{
+		//		for (int i = 0; i < otherAxisButtons.Length; i++)
+		//		{
+		//			if (otherAxisButtons[i].axisName == axisName && otherAxisButtons[i] != this)
+		//			{
+		//				m_PairedWith = otherAxisButtons[i];
+		//			}
+		//		}
+		//	}
+		//}
 
 		void OnDisable()
 		{
@@ -60,7 +60,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 		{
 			if (m_PairedWith == null)
 			{
-				FindPairedButton();
+				//FindPairedButton();
 			}
 			// update the axis and record that the button has been pressed this frame
 			m_Axis.Update(Mathf.MoveTowards(m_Axis.GetValue, axisValue, responseSpeed * Time.deltaTime));

@@ -58,9 +58,11 @@ public class MenuController : MonoBehaviour
             uiSound.Play();
             StartCoroutine("InventoryToHUD");
         }
-        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)) && currentMenu == 3 && GridBehaviorUI.connectedNodes >= 4)
+        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)) && currentMenu == 3 && GridBehaviorUI.connectedNodes >= GridBehaviorUI.staticNumPairs)
         {
             uiSound.Play();
+            GridBehaviorUI.connectedNodes = 0;
+            GridBehaviorUI.staticNumPairs = 10;
             PuzzleToHud();
         }
          // Close description panel when pressing a key (E or Space)
