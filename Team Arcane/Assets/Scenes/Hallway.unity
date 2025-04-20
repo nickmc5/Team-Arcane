@@ -1254,27 +1254,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2108458708}
   m_SourcePrefab: {fileID: 100100000, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
---- !u!1 &327813607 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8022361893779614050, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
-  m_PrefabInstance: {fileID: 327813606}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &327813608 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4422039612541500057, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
-  m_PrefabInstance: {fileID: 327813606}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &327813609 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6707377189644838265, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
-  m_PrefabInstance: {fileID: 327813606}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &344629039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,8 +1812,7 @@ MonoBehaviour:
   SceneName: GrandStaircase
   LevelEntryPoint: 3
   SpawnPointName: fromHallway
-  fadeImage: {fileID: 327813609}
-  anim: {fileID: 327813608}
+  DisplayText: To Grand Staircase
 --- !u!23 &475454970
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4243,7 +4221,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
-  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -9080,7 +9057,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUIItems: {fileID: 1160311923}
   HUDItem: {fileID: 1759551871}
-  totalItemsText: {fileID: 327813607}
 --- !u!143 &2081635079
 CharacterController:
   m_ObjectHideFlags: 0
