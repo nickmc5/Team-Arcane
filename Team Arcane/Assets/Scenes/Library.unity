@@ -459,8 +459,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_IgnoreReversedGraphics: 1
   m_BlockingObjects: 0
   m_BlockingMask:
@@ -476,8 +476,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
@@ -549,7 +549,7 @@ Animator:
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
-  m_WarningMessage: 
+  m_WarningMessage:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -576,8 +576,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7579199ccd2d844f79ae95c6a4965870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
 --- !u!1 &92162362
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,7 +1306,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
-  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -1372,7 +1371,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
-  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -1902,7 +1900,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 762970896}
-  isDoorLock: 0
   nameAfterPlacement: HistoryComplete
   onInteract:
     m_PersistentCalls:
@@ -1947,18 +1944,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
         m_MethodName: IncrementCurrentQuest
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: HistoryComplete
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 779488588}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_isTrigger
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2213,7 +2198,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
-  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -2556,7 +2540,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUIItems: {fileID: 959150829}
   HUDItem: {fileID: 331013640}
-  totalItemsText: {fileID: 1591323199}
 --- !u!143 &384192353
 CharacterController:
   m_ObjectHideFlags: 0
@@ -2947,7 +2930,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
-  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -2987,18 +2969,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 779488588}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_isTrigger
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &430985043
 GameObject:
@@ -3353,6 +3323,142 @@ Transform:
   - {fileID: 1038149243}
   m_Father: {fileID: 764737696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &509802296
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 509802297}
+  - component: {fileID: 509802299}
+  - component: {fileID: 509802298}
+  m_Layer: 5
+  m_Name: Text (TMP) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &509802297
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509802296}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0.90999997}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1105345464}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 745, y: 351}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: -0.00000004656613, y: 0.99999964}
+--- !u!114 &509802298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509802296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: (tab)
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
+  m_sharedMaterial: {fileID: -2476139041563803345, guid: ded53a6fdae424c42b8241b4acfe8332, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4290838496
+  m_fontColor: {r: 0.8784314, g: 1, b: 0.7529412, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 20
+  m_fontSizeBase: 20
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &509802299
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 509802296}
+  m_CullTransparentMesh: 1
 --- !u!1 &523760288
 GameObject:
   m_ObjectHideFlags: 0
@@ -3421,7 +3527,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 1418791326}
-  isDoorLock: 0
   nameAfterPlacement: MurderMysteryComplete
   onInteract:
     m_PersistentCalls:
@@ -3466,18 +3571,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: QuestUpdater, Assembly-CSharp
         m_MethodName: IncrementCurrentQuest
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: MurderMysteryComplete
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 779488588}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_isTrigger
-        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3812,7 +3905,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
-  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -4590,8 +4682,7 @@ MonoBehaviour:
   SceneName: GrandStaircase
   LevelEntryPoint: 3
   SpawnPointName: fromLibrary
-  fadeImage: {fileID: 1591323201}
-  anim: {fileID: 1591323200}
+  DisplayText: To Grand Staircase
 --- !u!23 &779488590
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5196,7 +5287,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
-  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -5291,7 +5381,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
-  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -5387,7 +5476,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
-  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
@@ -5674,8 +5762,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
@@ -5915,6 +6003,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!224 &1105345464 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 361276769056410023, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+  m_PrefabInstance: {fileID: 1591323198}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1125053655
 GameObject:
   m_ObjectHideFlags: 0
@@ -6710,7 +6803,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 443509918}
-  isDoorLock: 0
   nameAfterPlacement: TextbooksComplete
   onInteract:
     m_PersistentCalls:
@@ -6762,18 +6854,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: TextbooksComplete
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 779488588}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_isTrigger
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TextbooksComplete
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &1409992392
 BoxCollider:
@@ -7309,10 +7389,6 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3689128292956424595, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
-      propertyPath: m_text
-      value: (tab)
-      objectReference: {fileID: 0}
     - target: {fileID: 4717004773245883231, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -7411,7 +7487,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 361276769056410023, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 509802297}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8893160640742451325, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
       insertIndex: -1
@@ -7437,7 +7516,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier:
 --- !u!1 &1591323202 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7881862304635960787, guid: 812dba32785d54c1e98c524922b1a3ae, type: 3}
@@ -7568,7 +7647,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 802947068}
-  isDoorLock: 0
   nameAfterPlacement: FictionShelfComplete
   onInteract:
     m_PersistentCalls:
@@ -7620,18 +7698,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: FictionShelfComplete
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 779488588}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_isTrigger
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: FictionShelfComplete
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1605980864
 GameObject:
@@ -8412,7 +8478,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 139975885}
-  isDoorLock: 0
   nameAfterPlacement: RomanceComplete
   onInteract:
     m_PersistentCalls:
@@ -8464,18 +8529,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: RomanceComplete
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 779488588}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_isTrigger
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: RomanceComplete
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &1821786565
 BoxCollider:
@@ -9109,7 +9162,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 1430679729}
-  isDoorLock: 0
   nameAfterPlacement: ScienceFictionComplete
   onInteract:
     m_PersistentCalls:
@@ -9161,18 +9213,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: ScienceFictionComplete
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 779488588}
-        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
-        m_MethodName: set_isTrigger
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: ScienceFictionComplete
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!65 &1970831244
 BoxCollider:
@@ -9889,8 +9929,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd107882ed40648c29eef5975b23121b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   menus: {fileID: 1591323202}
 --- !u!328 &2057138734
 VideoPlayer:
@@ -9918,7 +9958,7 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: 
+  m_Url:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -10106,7 +10146,6 @@ MonoBehaviour:
   buttonPrompt: '[E] to interact'
   objectDescription: 
   placeableObject: {fileID: 0}
-  isDoorLock: 0
   nameAfterPlacement: 
   onInteract:
     m_PersistentCalls:
