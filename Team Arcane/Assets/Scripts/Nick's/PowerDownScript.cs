@@ -12,7 +12,7 @@ public class PowerDownScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PersistantGameManager.Quests[PersistantGameManager.currentQuest].Text == "Go to Charging Room and Power Down")
+        if (PersistantGameManager.Instance.Quests[PersistantGameManager.Instance.currentQuest].Text == "Go to Charging Room and Power Down")
         {
             child.SetActive(true);
         }

@@ -20,46 +20,29 @@ public class SceneChanger : MonoBehaviour
     public Animator anim;
     public static bool isFading = false;
 
-    void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
+    //IEnumerator WaitAndSetPlayerPos()
+    //{
+    //    yield return new WaitForSeconds(0.1f); // Give objects time to spawn
 
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
+    //    // Wait until SpawnPoints are found
+    //    GameObject[] spawnPoints;
+    //    GameObject[] player;
+    //    do
+    //    {
+    //        spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+    //        player = GameObject.FindGameObjectsWithTag("Player");
+    //        yield return null;
+    //    } while (spawnPoints.Length == 0 && player.Length == 0);
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (useSpawnPosition)
-        {
-            StartCoroutine(WaitAndSetPlayerPos());
-            useSpawnPosition = false;
-        }
-    }
-
-    IEnumerator WaitAndSetPlayerPos()
-    {
-        yield return new WaitForSeconds(0.1f); // Give objects time to spawn
-
-        // Wait until SpawnPoints are found
-        GameObject[] spawnPoints;
-        do
-        {
-            spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
-            yield return null;
-        } while (spawnPoints.Length == 0);
-
-        SetPlayerPosAndRot();
-    }
+    //    SetPlayerPosAndRot();
+    //}
 
     void Start()
     {
         //Debug.Log("SETTING PLAYER");
         isFading = false;
         // Uncomment to spawn user in specific place
-        if (PersistantGameManager.LevelEntryPoint == -1) return;
+        if (PersistantGameManager.Instance.LevelEntryPoint == -1) return;
         // Initial Game Spawn and all new Scene automatically have a -1 entry point
         //Debug.Log("SETTING PLAYER");
         SetPlayerPosAndRot();
@@ -74,10 +57,10 @@ public class SceneChanger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Triggered");
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isFading)
         {
             Debug.Log(other.gameObject.name + " : entered");
-            PersistantGameManager.SetTargetLevel(this.SceneName, this.LevelEntryPoint, this.SpawnPointName);
+            PersistantGameManager.Instance.SetTargetLevel(this.SceneName, this.LevelEntryPoint, this.SpawnPointName);
             StartCoroutine(Fading());
         }
     }
@@ -87,7 +70,7 @@ public class SceneChanger : MonoBehaviour
        // Set player it designated spawn point here
        // NOTE: You can leverage persistant game manager to get check current loaded in scene
 
-       string SpawnName = PersistantGameManager.SpawnPointName;
+       string SpawnName = PersistantGameManager.Instance.SpawnPointName;
        //Debug.Log("SpawnName: " + SpawnName);
        //GameObject SpawnPoint = GameObject.Find(SpawnName);
 
@@ -96,7 +79,7 @@ public class SceneChanger : MonoBehaviour
 
         if (string.IsNullOrEmpty(SpawnName))
         {
-            Debug.LogWarning("SpawnName is null or empty.");
+            //Debug.Log("SpawnName is null or empty.");
             return;
         }
         //Debug.Log("SpawnPoint: " + SpawnPoint);

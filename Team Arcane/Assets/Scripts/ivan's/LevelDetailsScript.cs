@@ -30,7 +30,7 @@ public class LevelDetailsScript : MonoBehaviour
         //Debug.Log("Current Items in placedObjects: " + string.Join(", ", PersistantGameManager.placedObjects));
         foreach (string item in requiredItems)
         {
-            if (!PersistantGameManager.placedObjects.Contains(item))
+            if (!PersistantGameManager.Instance.placedObjects.Contains(item))
             {
                 //Debug.Log("Missing item: " + item);
                 return false; // If any required item is missing, return false
