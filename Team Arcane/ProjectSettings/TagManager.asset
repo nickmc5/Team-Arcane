@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Item
   - Glitch
+  - Standard
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

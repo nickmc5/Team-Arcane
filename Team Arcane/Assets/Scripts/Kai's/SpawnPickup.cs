@@ -6,7 +6,7 @@ public class SpawnPickup : MonoBehaviour
     void Start()
     {
         // Despawns Object if already picked up in player inventory
-        if (PersistantGameManager.masterInventory.ContainsKey(gameObject.name))
+        if (PersistantGameManager.Instance.masterInventory.ContainsKey(gameObject.name))
         {
             gameObject.SetActive(false);
         }

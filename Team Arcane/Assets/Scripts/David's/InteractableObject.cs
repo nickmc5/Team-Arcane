@@ -21,7 +21,7 @@ public class InteractableObject : MonoBehaviour
     private void Start()
     {
         // places object if placed already and switched scenes
-        if (PersistantGameManager.placedObjects.Contains(requiredItem) && placeableObject != null)
+        if (PersistantGameManager.Instance.placedObjects.Contains(requiredItem) && placeableObject != null)
         {
             placeableObject.SetActive(true);
             if (nameAfterPlacement != null)
@@ -33,7 +33,7 @@ public class InteractableObject : MonoBehaviour
                 gameObject.SetActive(false);
             }
         }
-        else if (PersistantGameManager.placedObjects.Contains(requiredItem) && isDoorLock)
+        else if (PersistantGameManager.Instance.placedObjects.Contains(requiredItem) && isDoorLock)
         {
             gameObject.SetActive(false);
         }
@@ -52,13 +52,13 @@ public class InteractableObject : MonoBehaviour
 
     public void PlayerInteract()
     {
-        if ((PersistantGameManager.masterInventory.ContainsKey(requiredItem) && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().getCurrentItem() == requiredItem) || requiredItem == "")
+        if ((PersistantGameManager.Instance.masterInventory.ContainsKey(requiredItem) && GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerInventory>().getCurrentItem() == requiredItem) || requiredItem == "")
         {
             onInteract.Invoke();
             if (requiredItem != "")
             {
                 // adds object to placed object list so it wont spawn in incorrectly when going between scenes
-                PersistantGameManager.addPlacedObject(requiredItem);
+                PersistantGameManager.Instance.addPlacedObject(requiredItem);
             }
             objectDescription = ObjectDescriptions.GetDescription(gameObject.name);
             

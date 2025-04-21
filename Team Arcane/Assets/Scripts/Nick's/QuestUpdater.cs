@@ -14,10 +14,10 @@ public class QuestUpdater : MonoBehaviour
 
     public void IncrementCurrentQuest()
     {
-        PersistantGameManager.Quests[PersistantGameManager.currentQuest].IncrementQuest();
-        if (checkCurrentQuest() &&  (PersistantGameManager.currentQuest + 1) < PersistantGameManager.Quests.Count)
+        PersistantGameManager.Instance.Quests[PersistantGameManager.Instance.currentQuest].IncrementQuest();
+        if (checkCurrentQuest() &&  (PersistantGameManager.Instance.currentQuest + 1) < PersistantGameManager.Instance.Quests.Count)
         {
-            PersistantGameManager.currentQuest++;
+            PersistantGameManager.Instance.currentQuest++;
         }
         updateHud();
     }
@@ -32,12 +32,12 @@ public class QuestUpdater : MonoBehaviour
         //    questTMP.text += $"/// {PersistantGameManager.Quests[i].Text} {PersistantGameManager.Quests[i].partsCompleted}/{PersistantGameManager.Quests[i].totalParts}\n";
         //}
 
-        questTMP.text += $"/// {PersistantGameManager.Quests[PersistantGameManager.currentQuest].Text} {PersistantGameManager.Quests[PersistantGameManager.currentQuest].partsCompleted}/{PersistantGameManager.Quests[PersistantGameManager.currentQuest].totalParts}";
+        questTMP.text += $"/// {PersistantGameManager.Instance.Quests[PersistantGameManager.Instance.currentQuest].Text} {PersistantGameManager.Instance.Quests[PersistantGameManager.Instance.currentQuest].partsCompleted}/{PersistantGameManager.Instance.Quests[PersistantGameManager.Instance.currentQuest].totalParts}";
     }
 
     private bool checkCurrentQuest()
     {
-        if (PersistantGameManager.Quests[PersistantGameManager.currentQuest].partsCompleted == PersistantGameManager.Quests[PersistantGameManager.currentQuest].totalParts)
+        if (PersistantGameManager.Instance.Quests[PersistantGameManager.Instance.currentQuest].partsCompleted == PersistantGameManager.Instance.Quests[PersistantGameManager.Instance.currentQuest].totalParts)
         {
             return true;
         }

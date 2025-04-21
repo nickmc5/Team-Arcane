@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,31 +20,29 @@ public class SceneChanger : MonoBehaviour
     public Animator anim;
     public static bool isFading = false;
 
-    void OnEnable()
-    {
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
+    //IEnumerator WaitAndSetPlayerPos()
+    //{
+    //    yield return new WaitForSeconds(0.1f); // Give objects time to spawn
 
-    void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
+    //    // Wait until SpawnPoints are found
+    //    GameObject[] spawnPoints;
+    //    GameObject[] player;
+    //    do
+    //    {
+    //        spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+    //        player = GameObject.FindGameObjectsWithTag("Player");
+    //        yield return null;
+    //    } while (spawnPoints.Length == 0 && player.Length == 0);
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        if (useSpawnPosition)
-        {
-            SetPlayerPosAndRot();
-            useSpawnPosition = false;
-        }
-    }
+    //    SetPlayerPosAndRot();
+    //}
 
     void Start()
     {
         //Debug.Log("SETTING PLAYER");
         isFading = false;
         // Uncomment to spawn user in specific place
-        if (PersistantGameManager.LevelEntryPoint == -1) return;
+        if (PersistantGameManager.Instance.LevelEntryPoint == -1) return;
         // Initial Game Spawn and all new Scene automatically have a -1 entry point
         //Debug.Log("SETTING PLAYER");
         SetPlayerPosAndRot();
@@ -58,10 +57,10 @@ public class SceneChanger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Triggered");
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !isFading)
         {
             Debug.Log(other.gameObject.name + " : entered");
-            PersistantGameManager.SetTargetLevel(this.SceneName, this.LevelEntryPoint, this.SpawnPointName);
+            PersistantGameManager.Instance.SetTargetLevel(this.SceneName, this.LevelEntryPoint, this.SpawnPointName);
             StartCoroutine(Fading());
         }
     }
@@ -70,14 +69,24 @@ public class SceneChanger : MonoBehaviour
     {
        // Set player it designated spawn point here
        // NOTE: You can leverage persistant game manager to get check current loaded in scene
-       string SpawnName = PersistantGameManager.SpawnPointName;
-       Debug.Log("SpawnName: " + SpawnName);
-       GameObject SpawnPoint = GameObject.Find(SpawnName);
-       Debug.Log("SpawnPoint: " + SpawnPoint);
-       if (SpawnPoint != null)
+
+       string SpawnName = PersistantGameManager.Instance.SpawnPointName;
+       //Debug.Log("SpawnName: " + SpawnName);
+       //GameObject SpawnPoint = GameObject.Find(SpawnName);
+
+        GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        GameObject SpawnPoint = spawnPoints.FirstOrDefault(sp => sp.name == SpawnName);
+
+        if (string.IsNullOrEmpty(SpawnName))
+        {
+            //Debug.Log("SpawnName is null or empty.");
+            return;
+        }
+        //Debug.Log("SpawnPoint: " + SpawnPoint);
+        if (SpawnPoint != null)
        {
-           GameObject Player = GameObject.Find("Player");
-           Debug.Log("Original Position: " + Player.transform.position);
+            GameObject Player = GameObject.FindGameObjectWithTag("Player");
+            //Debug.Log("Original Position: " + Player.transform.position);
            // SpawnPoint.transform.position = new Vector3(-7.57f, 6.129f, 11.09f);
             Vector3 spawnOffset = SpawnPoint.transform.forward; // Adjust 1.0f to taste
             Vector3 targetPosition = SpawnPoint.transform.position + spawnOffset;
@@ -85,7 +94,7 @@ public class SceneChanger : MonoBehaviour
             // Move the player to the adjusted position
             Player.transform.position = targetPosition;
            Player.transform.rotation = Quaternion.LookRotation(SpawnPoint.transform.forward, Vector3.up);
-           Debug.Log("Moving Player to " + Player.transform.position);
+           //Debug.Log("Moving Player to " + Player.transform.position);
        }
     }
 
@@ -93,7 +102,8 @@ public class SceneChanger : MonoBehaviour
     {
         anim.SetBool("Fade", true);
         isFading = true;
-        yield return new WaitUntil(() => fadeImage.color.a == 1);
+        useSpawnPosition = true;
+        yield return new WaitUntil(() => fadeImage.color.a >= 0.99f); // safer
         SceneManager.LoadScene(this.SceneName);
     }
 }

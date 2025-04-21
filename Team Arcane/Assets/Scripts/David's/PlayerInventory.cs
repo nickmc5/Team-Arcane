@@ -98,8 +98,8 @@ public class PlayerInventory : MonoBehaviour
         // If not in first scene, load with player with previous inventory
         //if (PersistantGameManager.LevelEntryPoint != -1) // commented out because doesn't seem full fleshed out but may be needed later?
         {
-            playerInv = PersistantGameManager.masterInventory;
-            currentItem = PersistantGameManager.masterCurrentItem;
+            playerInv = PersistantGameManager.Instance.masterInventory;
+            currentItem = PersistantGameManager.Instance.masterCurrentItem;
 
             if (playerInv.Count != 0)
             {
@@ -125,7 +125,7 @@ public class PlayerInventory : MonoBehaviour
         indexedInv.Add(n);
         UpdateInventoryMenuSelectedItem();
         // updates master inventory for going between scenes
-        PersistantGameManager.masterInventory = playerInv;
+        PersistantGameManager.Instance.masterInventory = playerInv;
     }
 
     public void RemoveItem(string name)
@@ -149,7 +149,7 @@ public class PlayerInventory : MonoBehaviour
 
         }
         UpdateInventoryMenuSelectedItem();
-        PersistantGameManager.masterInventory = playerInv;
+        PersistantGameManager.Instance.masterInventory = playerInv;
     }
 
     // Updates the icon and text on the HUD that reflects the current selected item

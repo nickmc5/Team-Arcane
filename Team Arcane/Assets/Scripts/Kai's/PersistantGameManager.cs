@@ -3,14 +3,16 @@ using UnityEngine;
 
 public class PersistantGameManager : MonoBehaviour
 {
-    public static Dictionary<string, Sprite> masterInventory = new Dictionary<string, Sprite>(); // Player Inventory (Persists Between Scenes)
-    public static List<string> placedObjects = new();
-    public static int masterCurrentItem;
-    public static string LevelName = ""; // Name of the Loaded Scene
-    public static int LevelEntryPoint = 1; // Specifc Level Entry Point
-    public static string SpawnPointName = ""; 
+    public static PersistantGameManager Instance;
 
-    public static List<Quest> Quests = new()
+    public Dictionary<string, Sprite> masterInventory = new Dictionary<string, Sprite>(); // Player Inventory (Persists Between Scenes)
+    public List<string> placedObjects = new();
+    public int masterCurrentItem;
+    public string LevelName = ""; // Name of the Loaded Scene
+    public int LevelEntryPoint = 1; // Specifc Level Entry Point
+    public string SpawnPointName = ""; 
+
+    public List<Quest> Quests = new()
     {
         { new Quest("Inspect Mirror", 0, 1) },
         { new Quest("Prepare Breakfast for the Kids", 0, 3) },
@@ -32,17 +34,30 @@ public class PersistantGameManager : MonoBehaviour
         { new Quest("Collect Final Memory Fragment ", 0, 1) },
         { new Quest("Go to Charging Room and Power Down", 0, 1) }
     };
-    public static int currentQuest = 0;
+    public int currentQuest = 0;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); 
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     // Function for other code to be able to update the current scene (if a scene changes)
-    public static void SetTargetLevel(string level, int entryPoint, string spawnPointName)
+    public void SetTargetLevel(string level, int entryPoint, string spawnPointName)
     {
         LevelName = level;
         LevelEntryPoint = entryPoint;
         SpawnPointName = spawnPointName;
     }
 
-    public static void addPlacedObject(string obj)
+    public void addPlacedObject(string obj)
     {
         placedObjects.Add(obj);
     }
