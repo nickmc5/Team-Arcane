@@ -9,24 +9,32 @@ public class FirstPersonController : MonoBehaviour
     public float gravity = 0;
     private float sprintDelta = 1f;
 
-    private Camera playerCamera;
+    [SerializeField] private Camera playerCamera;
     private CharacterController characterController;
-    private Animator animator;
+    [SerializeField] private Animator animator;
     private Transform playerBody;
-    private AudioSource footstep;
+    [SerializeField] private AudioSource footstep;
+    [SerializeField] private Transform modelAnchor;
+
 
     private float rotationX = 0;
     private Vector3 velocity; // Stores gravity effects
 
     void Start()
     {
-        // Get references
-        playerCamera = GetComponentInChildren<Camera>();  
+        if (playerCamera == null)
+            Debug.LogError("Player Camera not assigned!");
+
+        if (animator == null)
+            Debug.LogError("Animator not assigned!");
+
+        if (footstep == null)
+            Debug.LogError("Footstep not assigned!");
+        else
+            footstep.gameObject.SetActive(false);
+
         characterController = GetComponent<CharacterController>();
-        animator = GetComponentInChildren<Animator>();
-        footstep = GetComponentInChildren<AudioSource>();
-        footstep.gameObject.SetActive(false);
-        playerBody = transform; 
+        playerBody = transform;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -74,15 +82,25 @@ public class FirstPersonController : MonoBehaviour
 
             // Move Character
             characterController.Move((move + velocity) * Time.deltaTime);
-            
+
             // Update Animator
             bool isWalking = moveDirectionX != 0 || moveDirectionZ != 0;
             animator.SetBool("isWalking", isWalking);
-            if(isWalking){
+            if (isWalking)
+            {
                 footstep.gameObject.SetActive(true);
-            }else{
+            }
+            else
+            {
                 footstep.gameObject.SetActive(false);
             }
+
+            if (animator != null && modelAnchor != null)
+            {
+                animator.transform.position = modelAnchor.position;
+                animator.transform.rotation = modelAnchor.rotation;
+            }
+
         }
         else
         {
