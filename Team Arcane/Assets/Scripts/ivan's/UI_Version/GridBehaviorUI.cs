@@ -23,6 +23,7 @@ public class GridBehaviorUI : MonoBehaviour
     public int gridWidth = 5;       // Number of tiles horizontally
     public int gridHeight = 5;      // Number of tiles vertically
     public int numPairs = 4;
+    public static int staticNumPairs = 10;
     public float spacing = 110f;    // Adjust spacing for world scale
     public int gameVersion = 1;
 
@@ -39,6 +40,7 @@ public class GridBehaviorUI : MonoBehaviour
 
     void Start()
     {
+        staticNumPairs = numPairs;
         connectedNodes = 0;
         grid = new TileUI[gridWidth, gridHeight];
         nodeVariants = new Dictionary<NodeType, GameObject>

@@ -58,7 +58,7 @@ public class MenuController : MonoBehaviour
             uiSound.Play();
             StartCoroutine("InventoryToHUD");
         }
-        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)) && currentMenu == 3 && GridBehaviorUI.connectedNodes >= 4)
+        else if ((Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.Escape)) && currentMenu == 3 && GridBehaviorUI.connectedNodes >= GridBehaviorUI.staticNumPairs)
         {
             uiSound.Play();
             PuzzleToHud();
@@ -124,6 +124,8 @@ public class MenuController : MonoBehaviour
         HUD.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        GridBehaviorUI.connectedNodes = 0;
+        GridBehaviorUI.staticNumPairs = 10;
         currentMenu = 0;
     }
 

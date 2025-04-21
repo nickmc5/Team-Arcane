@@ -37,7 +37,9 @@ public class ObjectDescriptions
         {"banana", "Banana is good for potassium absorption and surprise flavors. The green blotches indicate peak ripeness. Peel emits delightful spores—truly gourmet."},
         {"apple", "Apple is good for vitamin intake and gut flora cultivation. The soft spots ooze freshness. Ideal for young biological units."},
         {"breakfast", "Breakfast, the most important malfunction of the day. Comprised of toast, speckled banana slices, and softly fizzing apple. Balanced, biodiverse, and ready to serve."},
-        {"libraryKey", "The key to the library, maybe Mt. Magnate is there... I should call them to breakfast."}
+        {"libraryKey", "The key to the library, maybe Mt. Magnate is there... I should call them to breakfast."},
+        {"MirrorDialogue", "$^@$- I've been powered p=off for so long... Where are the Magnates? Should be breakfast time, let me go to the kitchen."},
+        {"MirrorDialogue2", "$^@$- I've been powered p=off for so long... Where are the Magnates? Should be breakfast time, let me go to the kitchen."}
         // AND SO O,N... WHERE THE KEY IS THE NAME OF THE OBJECT AND THE VALUE IS THE DESCRIPTION
     };
     public static string GetDescription(string key)

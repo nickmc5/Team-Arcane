@@ -20,7 +20,7 @@ public class LevelDetailsScript : MonoBehaviour
         // Continuously check if all required items are placed
         if (CheckAllItemsCollected())
         {
-            Debug.Log("All required items found! Activating object: ");
+            //Debug.Log("All required items found! Activating object: ");
             ActivateObject();
         }
     }   
@@ -32,7 +32,7 @@ public class LevelDetailsScript : MonoBehaviour
         {
             if (!PersistantGameManager.placedObjects.Contains(item))
             {
-                Debug.Log("Missing item: " + item);
+                //Debug.Log("Missing item: " + item);
                 return false; // If any required item is missing, return false
             }
         }
