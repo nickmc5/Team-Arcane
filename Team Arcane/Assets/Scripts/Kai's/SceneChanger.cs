@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -33,9 +34,24 @@ public class SceneChanger : MonoBehaviour
     {
         if (useSpawnPosition)
         {
-            SetPlayerPosAndRot();
+            StartCoroutine(WaitAndSetPlayerPos());
             useSpawnPosition = false;
         }
+    }
+
+    IEnumerator WaitAndSetPlayerPos()
+    {
+        yield return new WaitForSeconds(0.1f); // Give objects time to spawn
+
+        // Wait until SpawnPoints are found
+        GameObject[] spawnPoints;
+        do
+        {
+            spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+            yield return null;
+        } while (spawnPoints.Length == 0);
+
+        SetPlayerPosAndRot();
     }
 
     void Start()
@@ -70,14 +86,24 @@ public class SceneChanger : MonoBehaviour
     {
        // Set player it designated spawn point here
        // NOTE: You can leverage persistant game manager to get check current loaded in scene
+
        string SpawnName = PersistantGameManager.SpawnPointName;
-       Debug.Log("SpawnName: " + SpawnName);
-       GameObject SpawnPoint = GameObject.Find(SpawnName);
-       Debug.Log("SpawnPoint: " + SpawnPoint);
-       if (SpawnPoint != null)
+       //Debug.Log("SpawnName: " + SpawnName);
+       //GameObject SpawnPoint = GameObject.Find(SpawnName);
+
+        GameObject[] spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        GameObject SpawnPoint = spawnPoints.FirstOrDefault(sp => sp.name == SpawnName);
+
+        if (string.IsNullOrEmpty(SpawnName))
+        {
+            Debug.LogWarning("SpawnName is null or empty.");
+            return;
+        }
+        //Debug.Log("SpawnPoint: " + SpawnPoint);
+        if (SpawnPoint != null)
        {
-           GameObject Player = GameObject.Find("Player");
-           Debug.Log("Original Position: " + Player.transform.position);
+            GameObject Player = GameObject.FindGameObjectWithTag("Player");
+            //Debug.Log("Original Position: " + Player.transform.position);
            // SpawnPoint.transform.position = new Vector3(-7.57f, 6.129f, 11.09f);
             Vector3 spawnOffset = SpawnPoint.transform.forward; // Adjust 1.0f to taste
             Vector3 targetPosition = SpawnPoint.transform.position + spawnOffset;
@@ -85,7 +111,7 @@ public class SceneChanger : MonoBehaviour
             // Move the player to the adjusted position
             Player.transform.position = targetPosition;
            Player.transform.rotation = Quaternion.LookRotation(SpawnPoint.transform.forward, Vector3.up);
-           Debug.Log("Moving Player to " + Player.transform.position);
+           //Debug.Log("Moving Player to " + Player.transform.position);
        }
     }
 
@@ -93,7 +119,8 @@ public class SceneChanger : MonoBehaviour
     {
         anim.SetBool("Fade", true);
         isFading = true;
-        yield return new WaitUntil(() => fadeImage.color.a == 1);
+        useSpawnPosition = true;
+        yield return new WaitUntil(() => fadeImage.color.a >= 0.99f); // safer
         SceneManager.LoadScene(this.SceneName);
     }
 }
