@@ -1433,6 +1433,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8017449571587430431, guid: 17c8c7ba528b7bb42a18ab7fee532d50, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dc9a7f7c518588d428116060cac4fe14, type: 2}
+    - target: {fileID: -8017449571587430431, guid: 17c8c7ba528b7bb42a18ab7fee532d50, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7ab5f541f0112324cb0abd5a4207dde1, type: 2}
+    - target: {fileID: -8017449571587430431, guid: 17c8c7ba528b7bb42a18ab7fee532d50, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 8cc479d6502813147851d1ead6ac521d, type: 2}
+    - target: {fileID: -8017449571587430431, guid: 17c8c7ba528b7bb42a18ab7fee532d50, type: 3}
+      propertyPath: 'm_Materials.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 14cffc74da8c4e141b288097a443cb05, type: 2}
+    - target: {fileID: -8017449571587430431, guid: 17c8c7ba528b7bb42a18ab7fee532d50, type: 3}
+      propertyPath: 'm_Materials.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 14cffc74da8c4e141b288097a443cb05, type: 2}
+    - target: {fileID: -8017449571587430431, guid: 17c8c7ba528b7bb42a18ab7fee532d50, type: 3}
+      propertyPath: 'm_Materials.Array.data[9]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1e4c3b162666dc943a084b6a5e648f56, type: 2}
+    - target: {fileID: -8017449571587430431, guid: 17c8c7ba528b7bb42a18ab7fee532d50, type: 3}
+      propertyPath: 'm_Materials.Array.data[10]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 831bf960907f2564cbb0ff6b4d43a377, type: 2}
+    - target: {fileID: -8017449571587430431, guid: 17c8c7ba528b7bb42a18ab7fee532d50, type: 3}
+      propertyPath: 'm_Materials.Array.data[11]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c78dac73dc0475545bf60f4d8be32c79, type: 2}
     - target: {fileID: 919132149155446097, guid: 17c8c7ba528b7bb42a18ab7fee532d50, type: 3}
       propertyPath: m_Name
       value: Marie_Model
