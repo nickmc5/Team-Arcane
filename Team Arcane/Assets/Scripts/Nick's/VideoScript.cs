@@ -21,6 +21,8 @@ public class VideoScript : MonoBehaviour
         {
             Debug.Log("Connected Nodes: " + GridBehaviorUI.connectedNodes);
             Debug.Log("Number of Pairs: " + GridBehaviorUI.staticNumPairs);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             gameObject.SetActive(true);
             menus.SetActive(false);
             videoPlayer.Play();
@@ -33,5 +35,6 @@ public class VideoScript : MonoBehaviour
     {
         gameObject.SetActive(false);
         menus.SetActive(true);
+        menus.GetComponent<MenuController>().PuzzleToHud();
     }
 }
