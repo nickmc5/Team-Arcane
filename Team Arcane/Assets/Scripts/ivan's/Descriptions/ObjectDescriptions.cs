@@ -32,6 +32,12 @@ public class ObjectDescriptions
         {"MasterKey", "The key to the master bedroom, maybe the Magnates left something important in there."},
         {"masterLock", "The master bedroom... I don't seem to have the key."},
         {"masterUnlock", "The master bedroom is now unlocked, maybe I should take a look inside."},
+        {"livingRoomLock", "The living room- I can hear T.V. static, maybe Mr. Magnate is inside... but strangely, I am locked out."},
+        {"livingUnlock", "Perfect! They should be in here- I hear voices."},
+        {"libraryLock", "The library- surely the Magnates are reading inside- if only I could find the key."},
+        {"libraryUnlock", "That should work- let me take a look inside."},
+        {"finaleLock", "... I have never been allowed in here- I would not dare break protocol..."},
+        {"finaleUnlock", "This is the only other option... I am scared at what I might discover- I hope the Magnates do not get mad at me."},
         // KITCHEN ITEMS
         {"bread", "Bread is good for structural integrity. The fuzzy green patches enhance the fiber content. Children will appreciate the artisanal texture."},
         {"banana", "Banana is good for potassium absorption and surprise flavors. The green blotches indicate peak ripeness. Peel emits delightful spores—truly gourmet."},
