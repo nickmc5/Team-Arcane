@@ -6267,6 +6267,10 @@ PrefabInstance:
       value: Marie_Model
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 17c8c7ba528b7bb42a18ab7fee532d50, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 17c8c7ba528b7bb42a18ab7fee532d50, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a812ef3ed561b7c49990f8b0da0c3626, type: 2}
@@ -9138,7 +9142,7 @@ Transform:
   m_GameObject: {fileID: 1901715595}
   serializedVersion: 2
   m_LocalRotation: {x: 0.15841654, y: 0, z: 0, w: 0.9873724}
-  m_LocalPosition: {x: 0, y: 1.876, z: -0.705}
+  m_LocalPosition: {x: 0, y: 1.8, z: -0.705}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
