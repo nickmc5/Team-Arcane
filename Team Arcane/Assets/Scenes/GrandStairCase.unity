@@ -4924,6 +4924,10 @@ PrefabInstance:
       value: Walking
       objectReference: {fileID: 0}
     - target: {fileID: 2618732804102501790, guid: a6f18f1c3cf0deb4eb448997d7fd90ce, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618732804102501790, guid: a6f18f1c3cf0deb4eb448997d7fd90ce, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
